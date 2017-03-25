@@ -11,10 +11,10 @@ from .models import Post
 # Create your tests here.
 
 post_detail_url = HyperlinkedIdentityField(
-    view_name='postss-api:Detailedview',
+    view_name='postss-api:DetailedView',
     lookup_field='title',
 )
-class appCreateSerializer(serializers.ModelSerializer):
+class appCreateSerializer(ModelSerializer):
     class Meta:
         model = Post
         fields = ('body',
@@ -37,7 +37,7 @@ class appDetailedSerializer(serializers.ModelSerializer):
         return obj.get_markdown()
 
 
-class appSerializer(serializers.HyperlinkedModelSerializer):
+class appSerializer(serializers.ModelSerializer):
 
     url = post_detail_url
     class Meta:
