@@ -1,0 +1,7 @@
+{% extends "app/1.html" %}
+
+{% block content %}
+    <h2>{{ post.title }}</h2>
+    {{ post.date }}<br>
+    <font size="5">{{ post.body|safe|linebreaks}}</font>
+{% endblock %}

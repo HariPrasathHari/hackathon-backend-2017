@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load staticfiles%}
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css">
+    <style>
+        .container-fluid {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .navbar{
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body class="container-fluid"  background="/static/Agriculture-land.jpeg">
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="/app/home/">Home</a></li>
+  <li role="presentation" ><a href="/app/schemes/">Schemes</a></li>
+  <li role="presentation" ><a href="/app/contact/">Contact</a></li>
+</ul>
+<div class="cls">
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">DIGITAL INDIA</a>
+</div>
+{#<form class="navbar-form navbar-right">#}
+{#<div class="form-group">#}
+{#Aadhar number:#}
+{#<input type="text" class="form-control" placeholder="Aadhar number">#}
+{#</div>#}
+{#<button type="submit" class="waves-effect waves-light btn-large">Login</button>#}
+{#</form>#}
+
+
+</nav>
+</div>
+
+
+<div id="header" align="center" style="background image:"/static/Agriculture-land.jpeg">
+    <header>
+<br/>
+<h1>GOVERNMENT OF INDIA</h1>
+<h2>MINISTRY OF RURAL DEVELOPMENT</h2>
+<br/>
+</header>
+<br/>
+</div>
+<br/>
+<p><h4>
+Being the nodal Ministry for most of the development and welfare activities in the rural areas, the Ministry of Rural Development plays a pivotal role in the overall development strategy of the country.The vision and mission of the Ministry is sustainable and inclusive growth of rural India through a multipronged strategy for eradication of poverty by increasing livelihoods opportunities, providing social safety net and developing infrastructure for growth.This is expected to improve quality of life in rural India and to correct the developmental imbalances, aiming in the process, to reach out to most disadvantaged sections of the society.</h4></p>
+{% for c in response_data %}
+    <p>{{ response_date }}</p>
+{% endfor %}
+</body>
+</html>

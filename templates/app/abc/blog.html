@@ -1,0 +1,7 @@
+{% extends "app/1.html" %}
+
+{% block content %}
+    {% for Post in object_list %}
+        <h5> {{ Post.date }} <a href="/app/{{ Post.id }}">    {{ Post.title}}</h5> </a>
+    {% endfor %}
+{% endblock %}
