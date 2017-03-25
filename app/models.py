@@ -60,6 +60,7 @@ class schemes(models.Model):
     max_salaray=models.IntegerField()
     req_community=models.CharField(max_length=4)
     scheme_name=models.CharField(max_length=30)
+    slug=models.CharField(max_length=30)
 
 
     def __str__(self):

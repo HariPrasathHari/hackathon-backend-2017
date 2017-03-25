@@ -38,7 +38,6 @@ class appDetailedSerializer(serializers.ModelSerializer):
 
 
 class appSerializer(serializers.ModelSerializer):
-
     url = post_detail_url
     class Meta:
         model = Post
