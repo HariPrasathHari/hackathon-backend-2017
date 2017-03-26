@@ -55,45 +55,42 @@ class SchemeList(ListAPIView):
     filter_backends = [SearchFilter, OrderingFilter]
     permission_classes = [AllowAny]
     pagination_class = PostPageNumberPagination
-    search_fields = ['title', 'body', 'user__first_name','date','user']
+    search_fields = ['title', 'date', 'slug', 'min_age', 'max_salary']
     def get_queryset(self,*args,**kwargs):
         queryset_list = Post.objects.all()
         query = self.request.GET.get("q")
         if query:
             queryset_list = queryset_list.filter(
                 Q(title__icontains=query) |
-                Q(body__icontains=query) |
-                Q(user__first_name__icontains=query) |
-                Q(user__last_name__icontains=query)
+                Q(date__icontains=query)
             ).distinct()
         return queryset_list
 
 class SchemeCreate(CreateAPIView):
     queryset = Post.objects.all()
     serializer_class = appCreateSerializer
-    permission_classes = [IsAuthenticated,IsAdminUser]
+    # permission_classes = [IsAuthenticated,IsAdminUser]
 
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
-
+        serializer.save()
 
 class SchemeDetailedList(RetrieveAPIView):
     queryset = Post.objects.all()
     serializer_class = appDetailedSerializer
-    lookup_field = 'title'
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    lookup_field = 'slug'
+    # permission_classes = [IsAuthenticatedOrReadOnly]
 
 class SchemeUpdateList(RetrieveUpdateAPIView):
     queryset = Post.objects.all()
     serializer_class = appCreateSerializer
-    lookup_field = 'title'
-    permission_classes = [IsAuthenticated, IsOwnerorObjectReadOnly]
+    lookup_field = 'slug'
+    # permission_classes = [IsAuthenticated, IsOwnerorObjectReadOnly]
 
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+        serializer.save()
 
 class SchemeDeleteList(DestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = appDetailedSerializer
-    lookup_field = 'title'
-    permission_classes = [IsOwnerorObjectReadOnly]
+    lookup_field = 'slug'
+    # permission_classes = [IsOwnerorObjectReadOnly]

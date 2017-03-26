@@ -16,6 +16,7 @@ from rest_framework.generics import (
     RetrieveAPIView,
     DestroyAPIView,
     CreateAPIView,
+    GenericAPIView,
     RetrieveUpdateAPIView,
     )
 from rest_framework.permissions import (
@@ -31,14 +32,14 @@ from .serializers import (
     ProfileCreateSerializer,
     )
 
-from app.permissions import IsOwnerorObjectReadOnly
+from profiledet.permissions import IsOwnerorObjectReadOnly
 from app.paginations import PostPageNumberPagination,PostLimitOffset
 
 
 class ProfileList(ListAPIView):
     serializer_class = ProfileSerializer
     filter_backends = [SearchFilter, OrderingFilter]
-    permission_classes = [AllowAny,IsAdminUser,IsAuthenticated]
+    permission_classes = [AllowAny]
     pagination_class = PostPageNumberPagination
     search_fields = ['age', 'community', 'first_name','last_name','middle_name']
     def get_queryset(self,*args,**kwargs):
@@ -53,32 +54,31 @@ class ProfileList(ListAPIView):
             ).distinct()
         return queryset_list
 
-class ProfileCreate(CreateAPIView):
+class ProfileDetailedList(RetrieveAPIView):
+    queryset = Profiledet.objects.all()
+    serializer_class = ProfileDetailedSerializer
+    lookup_field = 'user'
+    permission_classes = [IsAuthenticated,IsOwnerorObjectReadOnly]
+
+class ProfileCreate(CreateModelMixin,RetrieveUpdateAPIView):
     queryset = Profiledet.objects.all()
     serializer_class = ProfileCreateSerializer
-    permission_classes = [IsAuthenticated]
-
+    permission_classes = [IsAuthenticated, IsOwnerorObjectReadOnly]
+    lookup_field = 'user'
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
+    def create(self, request, *args, **kwargs):
+        return self.create()
 
-class ProfileList(RetrieveAPIView):
-    queryset = Profiledet.objects.all()
-    serializer_class = ProfileDetailedSerializer
-    # lookup_field = 'title'
-    permission_classes = [IsAuthenticatedOrReadOnly]
+
+
 
 class ProfileUpdateList(RetrieveUpdateAPIView):
     queryset = Profiledet.objects.all()
     serializer_class = ProfileCreateSerializer
-    # lookup_field = 'title'
-    permission_classes = [IsAuthenticated]
+    lookup_field = 'user'
+    permission_classes = [IsAuthenticated,IsOwnerorObjectReadOnly]
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
-
-class ProfileDeleteList(DestroyAPIView):
-    queryset = Profiledet.objects.all()
-    serializer_class = ProfileDetailedSerializer
-    # lookup_field = 'title'
-    permission_classes = [IsAdminUser]

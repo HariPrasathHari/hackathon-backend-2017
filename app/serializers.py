@@ -8,37 +8,50 @@ from rest_framework.serializers import (
 from .models import Post
 
 
-# Create your tests here.
 
 post_detail_url = HyperlinkedIdentityField(
     view_name='postss-api:DetailedView',
-    lookup_field='title',
+    lookup_field='slug',
 )
+
 class appCreateSerializer(ModelSerializer):
     class Meta:
         model = Post
-        fields = ('body',
-                  'date')
+        fields = ('title',
+                  'date',
+                  'min_age',
+                  'max_salary',
+                  'req_community',
+                  )
 
 
 class appDetailedSerializer(serializers.ModelSerializer):
-    user = SerializerMethodField()
-    html = SerializerMethodField()
+    # html = SerializerMethodField()
 
     url = post_detail_url
     class Meta:
         model = Post
-        fields = ('url', 'id', 'user', 'html', 'title', 'date', 'body')
+        fields = ('title',
+                  'slug',
+                  'date',
+                  'min_age',
+                  'max_salary',
+                  'req_community',
+                  'url',
+                  )
 
-    def get_user(self, obj):
-        return str(obj.user.username)
-
-    def get_html(self, obj):
-        return obj.get_markdown()
 
 
 class appSerializer(serializers.ModelSerializer):
     url = post_detail_url
     class Meta:
         model = Post
-        fields = ('id', 'date', 'title', 'url')
+        fields = ('title',
+                  'date',
+                  'min_age',
+                  'max_salary',
+                  'url',
+                  'req_community',
+                  'slug',
+                  )
+

@@ -11,10 +11,12 @@ from markdown_deux import markdown
 
 # Create your models here.
 class  Post(models.Model):
-    title=models.CharField(max_length=30)
-    body=models.TextField()
-    date=models.DateTimeField()
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
+    title = models.CharField(max_length=30)
+    date = models.DateField()
+    min_age = models.IntegerField()
+    max_salary = models.IntegerField()
+    slug = models.CharField(max_length=30)
+    req_community = models.CharField(max_length=4)
 
     def __str__(self):
         return self.title
@@ -24,44 +26,39 @@ class  Post(models.Model):
         return self.title
 
     def get_markdown(self):
-        body = self.body
-        markdown_text = markdown(body)
+        slug = self.slug
+        markdown_text = markdown(slug)
         return mark_safe(markdown_text)
 
     def get_absolute_url(self):
-        return reverse("postss-api:list", kwargs={"title": self.title})
+        return reverse("postss-api:list", kwargs={"slug": self.slug})
 
     def get_api_url(self):
-        return reverse("postss-api:Detailedview", kwargs={"title": self.title})
+        return reverse("postss-api:DetailedView", kwargs={"slug": self.slug})
 
 
 
-def create_title(instance, new_slug=None):
-    title = slugify(instance.body)
+def create_slug(instance, new_slug=None):
+    slug = slugify(instance.title)
     if new_slug is not None:
-        title = new_slug
-    qs = Post.objects.filter(title=title).order_by("-id")
+        slug = new_slug
+    qs = Post.objects.filter(slug=slug).order_by("-id")
     exists = qs.exists()
     if exists:
-        new_slug = "%s-%s" %(title, qs.first().id)
-        return create_title(instance, new_slug=new_slug)
-    return title
+        new_slug = "%s-%s" %(slug, qs.first().id)
+        return create_slug(instance, new_slug=new_slug)
+    return slug
 
+# def create_user(instance, new_user=None):
+#     if new_user is None:
+#         new_user = instance.request.user
+#         user = new_user
+#     return user
 
 def pre_save_post_receiver(sender, instance, *args, **kwargs):
-    if not instance.title:
-        instance.title = create_title(instance)
+    if not instance.slug:
+        instance.slug = create_slug(instance)
+
 
 
 pre_save.connect(pre_save_post_receiver, sender=Post)
-
-class schemes(models.Model):
-    min_age=models.IntegerField()
-    max_salaray=models.IntegerField()
-    req_community=models.CharField(max_length=4)
-    scheme_name=models.CharField(max_length=30)
-    slug=models.CharField(max_length=30)
-
-
-    def __str__(self):
-        return self.scheme_name

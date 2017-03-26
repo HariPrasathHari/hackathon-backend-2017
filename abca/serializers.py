@@ -39,8 +39,8 @@ class UserCreateSerializer(ModelSerializer):
     token = CharField(allow_blank=True, read_only=True)
     # email = EmailField(label='Email Address', write_only=True)
     # email2 = EmailField(label='Confirm Email', write_only=True)
-    username = IntegerField(label='aadhar id',write_only=True)
-    pass2 = CharField(label='Confirm password')
+    username = IntegerField(label='Aadhar id')
+    pass2 = CharField(label='Confirm password',write_only=True)
 
     class Meta:
         model = User
@@ -54,9 +54,8 @@ class UserCreateSerializer(ModelSerializer):
 
         ]
         extra_kwargs = {"password":
-                            {"write_only": True},
-                        "pass2":{"write_only": True}
-                        }
+                            {"write_only": True}
+                            }
 
     def validate(self, data):
         # email = data['email']
@@ -68,39 +67,24 @@ class UserCreateSerializer(ModelSerializer):
     def validate_username(self, value):
         data = self.get_initial()
         username = value
+        user_qs = User.objects.filter(username=username)
+        if user_qs.exists():
+            raise ValidationError("This user has already registered.")
         # if username.isdigit()!=True:
         #     raise ValidationError("Aadhar field should contain numbers")
-        if len(str(username)) !=12:
-            raise ValidationError("aadhar number should be 12 digit")
+        if len(str(username)) != 12:
+            raise ValidationError("Aadhar number should be 12 digit")
         print(username, data)
         return value
+
     def validate_pass2(self, value):
         data = self.get_initial()
-        compp = data.get("password")
+        compared = data.get("password")
         pass2 = value
-        if compp!=pass2:
+        if compared != pass2:
             return ValidationError("Passwords must match")
         return value
 
-    # def validate_email(self, value):
-    #     data = self.get_initial()
-    #     email1 = data.get("email2")
-    #     email2 = value
-    #     if email1 != email2:
-    #         raise ValidationError("Emails must match.")
-    #
-    #     user_qs = User.objects.filter(email=email2)
-    #     if user_qs.exists():
-    #         raise ValidationError("This user has already registered.")
-    #     return value
-    #
-    # def validate_email2(self, value):
-    #     data = self.get_initial()
-    #     email1 = data.get("email")
-    #     email2 = value
-    #     if email1 != email2:
-    #         raise ValidationError("Emails must match.")
-    #     return value
 
     def create(self, validated_data):
         username = validated_data['username']
@@ -135,7 +119,8 @@ class UserLoginSerializer(ModelSerializer):
 
         ]
         extra_kwargs = {"password":
-                            {"write_only": True}
+                            {"write_only": True},
+
                         }
 
     def validate(self, data):
@@ -160,11 +145,4 @@ class UserLoginSerializer(ModelSerializer):
                 data['token'] = token
                 return data
         raise ValidationError("Invalid credentials")
-
-        # # email = data['email']
-        # # user_qs = User.objects.filter(email=email)
-        # # if user_qs.exists():
-        # #     raise ValidationError("This user has already registered.")
-        # return data
-
 

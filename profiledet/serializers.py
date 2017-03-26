@@ -9,14 +9,25 @@ from .models import Profiledet
 class ProfileCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profiledet
-        fields = '__all__'
-
+        fields = ('age',
+                  'salary',
+                  'community',
+                  'first_name',
+                  'middle_name',
+                  'last_name'
+                  )
 
 class ProfileDetailedSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Profiledet
-        fields='__all__'
+        fields = ('age',
+                  'salary',
+                  'community',
+                  'first_name',
+                  'middle_name',
+                  'last_name'
+                  )
 
     # def get_user(self, obj):
     #     return str(obj.user.username)
@@ -33,4 +44,8 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Profiledet
-        fields = '__all__'
+        fields = ('age',
+                  'first_name',
+                  'last_name',
+                  'user',
+                  )

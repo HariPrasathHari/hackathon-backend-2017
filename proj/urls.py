@@ -20,6 +20,7 @@ from app import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^users/', include('profiledet.urls')),
     url(r'^users/', include('abca.urls')),
     url(r'^app/',include('app.urls', namespace='postss-api')),
     url(r'^accounts/', include('registration.backends.hmac.urls')),
