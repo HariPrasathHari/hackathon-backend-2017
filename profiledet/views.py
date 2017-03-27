@@ -2,9 +2,9 @@ from django.shortcuts import render
 from django.db.models import Q
 
 from rest_framework.filters import (
-        SearchFilter,
-        OrderingFilter,
-    )
+    SearchFilter,
+    OrderingFilter,
+)
 from rest_framework.mixins import (
     CreateModelMixin,
     UpdateModelMixin,
@@ -18,22 +18,22 @@ from rest_framework.generics import (
     CreateAPIView,
     GenericAPIView,
     RetrieveUpdateAPIView,
-    )
+)
 from rest_framework.permissions import (
     AllowAny,
     IsAuthenticated,
     IsAdminUser,
     IsAuthenticatedOrReadOnly,
-    )
+)
 from .models import Profiledet
 from .serializers import (
     ProfileDetailedSerializer,
     ProfileSerializer,
     ProfileCreateSerializer,
-    )
+)
 
 from profiledet.permissions import IsOwnerorObjectReadOnly
-from app.paginations import PostPageNumberPagination,PostLimitOffset
+from app.paginations import PostPageNumberPagination, PostLimitOffset
 
 
 class ProfileList(ListAPIView):
@@ -41,8 +41,9 @@ class ProfileList(ListAPIView):
     filter_backends = [SearchFilter, OrderingFilter]
     permission_classes = [AllowAny]
     pagination_class = PostPageNumberPagination
-    search_fields = ['age', 'community', 'first_name','last_name','middle_name']
-    def get_queryset(self,*args,**kwargs):
+    search_fields = ['age', 'community', 'first_name', 'last_name', 'middle_name']
+
+    def get_queryset(self, *args, **kwargs):
         queryset_list = Profiledet.objects.all()
         query = self.request.GET.get("q")
         if query:
@@ -54,31 +55,32 @@ class ProfileList(ListAPIView):
             ).distinct()
         return queryset_list
 
+
 class ProfileDetailedList(RetrieveAPIView):
     queryset = Profiledet.objects.all()
     serializer_class = ProfileDetailedSerializer
     lookup_field = 'user'
-    permission_classes = [IsAuthenticated,IsOwnerorObjectReadOnly]
+    permission_classes = [AllowAny]
 
-class ProfileCreate(CreateModelMixin,RetrieveUpdateAPIView):
+
+class ProfileCreate(RetrieveUpdateAPIView):
     queryset = Profiledet.objects.all()
     serializer_class = ProfileCreateSerializer
-    permission_classes = [IsAuthenticated, IsOwnerorObjectReadOnly]
+    permission_classes = [IsOwnerorObjectReadOnly, IsAuthenticated]
     lookup_field = 'user'
+
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
-    def create(self, request, *args, **kwargs):
-        return self.create()
-
-
+    # def create(self, request, *args, **kwargs):
+    #     return self.create()
 
 
 class ProfileUpdateList(RetrieveUpdateAPIView):
     queryset = Profiledet.objects.all()
     serializer_class = ProfileCreateSerializer
     lookup_field = 'user'
-    permission_classes = [IsAuthenticated,IsOwnerorObjectReadOnly]
+    permission_classes = [IsAuthenticated, IsOwnerorObjectReadOnly]
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)

@@ -16,16 +16,25 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 from rest_framework.urlpatterns import format_suffix_patterns
+from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
 from app import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^api-token-auth/', obtain_jwt_token),
+    url(r'^api-token-refresh/', refresh_jwt_token),
     url(r'^users/', include('profiledet.urls')),
+    # url(r'^status/', include('status.urls',namespace='Status',app_name='Status')),
     url(r'^users/', include('abca.urls')),
-    url(r'^app/',include('app.urls', namespace='postss-api')),
+    url(r'^app/', include('app.urls', namespace='postss-api')),
     url(r'^accounts/', include('registration.backends.hmac.urls')),
-    #url(r'^schemes/',views.schemeList.as_view()),
-    url(r'^',include('app.urls'),name='app-1'),
+    url(r'^schemes/apply/', include('ApplyScheme.urls', namespace='Apply', app_name='ApplyScheme')),
+    url(r'^', include('app.urls'), name='app-1'),
 ]
 
-urlpatterns=format_suffix_patterns(urlpatterns)
+urlpatterns = format_suffix_patterns(urlpatterns)
+
+urlpatterns += [
+    url(r'^api-auth/', include('rest_framework.urls',
+                               namespace='rest_framework')),
+    ]

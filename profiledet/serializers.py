@@ -17,8 +17,8 @@ class ProfileCreateSerializer(serializers.ModelSerializer):
                   'last_name'
                   )
 
-class ProfileDetailedSerializer(serializers.ModelSerializer):
 
+class ProfileDetailedSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profiledet
         fields = ('age',
@@ -29,18 +29,18 @@ class ProfileDetailedSerializer(serializers.ModelSerializer):
                   'last_name'
                   )
 
-    # def get_user(self, obj):
-    #     return str(obj.user.username)
-    #
-    # def get_html(self, obj):
-    #     return obj.get_markdown()
+        # def get_user(self, obj):
+        #     return str(obj.user.username)
+        #
+        # def get_html(self, obj):
+        #     return obj.get_markdown()
 
 
 class ProfileSerializer(serializers.ModelSerializer):
-#     url = HyperlinkedIdentityField(
-#         view_name='postss-api:list',
-#         lookup_field='title',
-#     )
+    #     url = HyperlinkedIdentityField(
+    #         view_name='postss-api:list',
+    #         lookup_field='title',
+    #     )
 
     class Meta:
         model = Profiledet
