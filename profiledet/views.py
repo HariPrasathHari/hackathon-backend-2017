@@ -48,7 +48,7 @@ class ProfileList(ListAPIView):
     search_fields = ['age', 'community', 'first_name', 'last_name', 'middle_name']
 
     def get_queryset(self, *args, **kwargs):
-        queryset_list = Profiledet.objects.all()
+        queryset_list = Profiledet.objects.filter(user)
         query = self.request.GET.get("q")
         if query:
             queryset_list = queryset_list.filter(
@@ -67,7 +67,7 @@ class ProfileDetailedList(RetrieveUpdateAPIView):
     permission_classes = [AllowAny]
 
 
-class ProfileCreate(CreateAPIView):
+class ProfileCreate(CreateModelMixin, RetrieveUpdateAPIView):
     queryset = Profiledet.objects.all()
     serializer_class = ProfileCreateSerializer
     permission_classes = [IsOwnerorObjectReadOnly, IsAuthenticated]
@@ -80,7 +80,9 @@ class ProfileCreate(CreateAPIView):
         try:
             return super(ProfileCreate, self).create(request, *args, **kwargs)
         except IntegrityError:
-            content={'error':'IntegrityError'}
+            user_id=Profiledet.objects.get(user=request.user)
+            content={'error':'IntegrityError',
+                     'user_id':user_id.pk}
             return Response(content, status=status.HTTP_400_BAD_REQUEST)
 
 

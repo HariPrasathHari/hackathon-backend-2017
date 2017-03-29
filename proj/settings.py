@@ -100,29 +100,19 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-DATABASES = {
-   'default': {
-      'ENGINE': 'django.db.backends.mysql',
-      'NAME': 'testdb',
-      'USER': 'root',
-      'PASSWORD': 'harihari',
-      'HOST': '127.0.0.1',
-      'PORT': '3306',
-   }
-}
 
 
-
-DATABASES = {
-   'default': {
-      'ENGINE': 'django.db.backends.mysql',
-      'NAME': 'hackathon_db',
-      'USER': 'devil',
-      'PASSWORD': 'harihari',
-      'HOST': '117.239.246.58',
-      'PORT': '3306',
-   }
-}
+#
+# DATABASES = {
+#    'default': {
+#       'ENGINE': 'django.db.backends.mysql',
+#       'NAME': 'hackathon_db',
+#       'USER': 'devil',
+#       'PASSWORD': 'harihari',
+#       'HOST': '117.239.246.58',
+#       'PORT': '3306',
+#    }
+# }
 
 
 
