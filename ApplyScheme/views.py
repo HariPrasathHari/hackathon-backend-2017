@@ -36,7 +36,7 @@ from app.paginations import PostPageNumberPagination,PostLimitOffset
 class SchemeList(ListAPIView):
     serializer_class = AppliedSchemesSerializer
     filter_backends = [SearchFilter, OrderingFilter]
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
     pagination_class = PostPageNumberPagination
     search_fields = ['title', 'date', 'slug', 'min_age', 'max_salary']
     def get_queryset(self,*args,**kwargs):
@@ -52,7 +52,7 @@ class SchemeList(ListAPIView):
 class AppliedSchemeCreate(CreateAPIView):
     queryset = AppliedSchemes.objects.all()
     serializer_class = AppliedSchemesCreateSerializer
-    permission_classes = [IsOwnerorObjectReadOnly]
+    permission_classes = [IsOwnerorObjectReadOnly,IsAuthenticated]
 
     def perform_create(self, serializer):
         serializer.save()
@@ -61,13 +61,13 @@ class SchemeDetailedList(RetrieveAPIView):
     queryset = AppliedSchemes.objects.all()
     serializer_class = AppliedSchemesDetailedSerializer
     # lookup_field = 'slug'
-    # permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticatedOrReadOnly, IsAuthenticated]
 
 class SchemeUpdateList(RetrieveUpdateAPIView):
     queryset = AppliedSchemes.objects.all()
     serializer_class = AppliedSchemesSerializer
     # lookup_field = 'slug'
-    # permission_classes = [IsAuthenticated, IsOwnerorObjectReadOnly]
+    permission_classes = [IsAuthenticated, IsOwnerorObjectReadOnly]
 
     def perform_create(self, serializer):
         serializer.save()
@@ -76,4 +76,4 @@ class SchemeDeleteList(DestroyAPIView):
     queryset = AppliedSchemes.objects.all()
     serializer_class = AppliedSchemesSerializer
     # lookup_field = 'slug'
-    # permission_classes = [IsOwnerorObjectReadOnly]
+    permission_classes = [IsOwnerorObjectReadOnly, IsAuthenticated]

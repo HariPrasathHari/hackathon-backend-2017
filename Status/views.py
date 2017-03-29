@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.db.models import Q
-from .models import AppliedSchemes,StatusOfSchemes
+from .models import AppliedSchemes, StatusOfSchemes
 from rest_framework.filters import (
     SearchFilter,
     OrderingFilter,
@@ -28,7 +28,8 @@ from app.paginations import PostPageNumberPagination, PostLimitOffset
 class StatusList(ListAPIView):
     serializer_class = StatusSerializer
     filter_backends = [SearchFilter, OrderingFilter]
-    permission_classes = [IsAuthenticated,IsGovernmentOfficial]
+    permission_classes = [IsAuthenticated,
+                          IsGovernmentOfficial]
     pagination_class = PostPageNumberPagination
     search_fields = [
         'Status_of_scheme',

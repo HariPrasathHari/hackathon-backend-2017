@@ -70,7 +70,7 @@ class SchemeList(ListAPIView):
 class SchemeCreate(CreateAPIView):
     queryset = Post.objects.all()
     serializer_class = appCreateSerializer
-    # permission_classes = [IsAuthenticated,IsAdminUser]
+    permission_classes = [IsAuthenticated, IsGovernmentOfficial]
 
     def perform_create(self, serializer):
         serializer.save()
@@ -79,7 +79,7 @@ class SchemeDetailedList(RetrieveAPIView):
     queryset = Post.objects.all()
     serializer_class = appDetailedSerializer
     lookup_field = 'slug'
-    # permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
 class SchemeUpdateList(RetrieveUpdateAPIView):
     queryset = Post.objects.all()
