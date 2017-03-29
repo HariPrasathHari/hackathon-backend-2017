@@ -8,7 +8,6 @@ def create_user(instance, new_user=None):
         user = new_user
     return user
 
-
 def pre_save_AppliedSchemes_receiver(sender, instance, *args, **kwargs):
     if not instance.user:
         instance.user = create_user(instance)

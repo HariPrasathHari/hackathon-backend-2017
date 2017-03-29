@@ -25,7 +25,7 @@ SECRET_KEY = '4goxq+z)5!&0kvp%6^w%9$*&^98(c7c)bak&p_e-e23*n+b8m%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_jwt',
     'registration',
+    # 'pymysql',
 ]
 
 MIDDLEWARE = [
@@ -99,6 +100,18 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+DATABASES = {
+   'default': {
+      'ENGINE': 'django.db.backends.mysql',
+      'NAME': 'testdb',
+      'USER': 'root',
+      'PASSWORD': 'harihari',
+      'HOST': '127.0.0.1',
+      'PORT': '3306',
+   }
+}
+
+
 
 
 # Password validation
@@ -146,3 +159,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,"static/")
+MEDIA_ROOT=os.path.join (BASE_DIR,"media/")
+MEDIA_URL = '/media/'
