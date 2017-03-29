@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^api-token-auth/', obtain_jwt_token),
     url(r'^api-token-refresh/', refresh_jwt_token),
     url(r'^users/', include('profiledet.urls')),
-    # url(r'^status/', include('status.urls',namespace='Status',app_name='Status')),
+    url(r'^status/', include('Status.urls',namespace='Status',app_name='Status')),
     url(r'^users/', include('abca.urls')),
     url(r'^app/', include('app.urls', namespace='postss-api')),
     url(r'^accounts/', include('registration.backends.hmac.urls')),

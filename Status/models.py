@@ -4,9 +4,8 @@ from django.db.models.signals import pre_save
 from django.conf import settings
 from ApplyScheme.models import AppliedSchemes
 
-
 class StatusOfSchemes(models.Model):
-    Scheme_id = models.ForeignKey(AppliedSchemes)
+    Scheme_id = models.OneToOneField(AppliedSchemes, auto_created=True)
     APPLIED = 'AP'
     CHECKING = 'CH'
     TRANSACTION = 'TR'
@@ -23,8 +22,8 @@ class StatusOfSchemes(models.Model):
         default=APPLIED,
     )
     def is_upperclass(self):
-        return self.Status_of_scheme in (self.COMPLETED, self.TRANSACTION)
+        return self.Status_of_scheme in (self.COMPLETED, self.TRANSACTION, self.APPLIED, self.CHECKING)
 
 
     def __str__(self):
-        return self.Status_of_scheme
+        return self.Status_of_scheme.Status_Of

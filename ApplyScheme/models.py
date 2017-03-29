@@ -7,6 +7,7 @@ from django.core.urlresolvers import reverse
 from django.db.models.signals import pre_save
 from django.conf import settings
 from app.models import Post
+# from Status.models import StatusOfSchemes
 from django.utils.safestring import mark_safe
 from markdown_deux import markdown
 
@@ -21,16 +22,20 @@ class AppliedSchemes(models.Model):
         return self.scheme.slug+' : '+self.user.username+' : '+str(self.date_applied)
 
 
-def create_user(instance, new_user=None):
-    if new_user is None:
-        new_user = instance.request.user
-        user = new_user
-    return user
-
-
-def pre_save_AppliedSchemes_receiver(sender, instance, *args, **kwargs):
-    if not instance.user:
-        instance.user = create_user(instance)
-
-
-pre_save.connect(pre_save_AppliedSchemes_receiver, sender=AppliedSchemes)
+# def create_user(instance, new_user=None):
+#     if new_user is None:
+#         new_user = instance.request.user
+#         user = new_user
+#     return user
+#
+#
+# def pre_save_AppliedSchemes_receiver(sender, instance, *args, **kwargs):
+#     if not instance.user:
+#         instance.user = create_user(instance)
+#     StatusOfSchemes.objects.create(scheme_id=instance)
+#
+#
+#
+#
+#
+# pre_save.connect(pre_save_AppliedSchemes_receiver, sender=AppliedSchemes)

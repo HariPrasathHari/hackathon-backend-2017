@@ -1,5 +1,7 @@
+from django.db import IntegrityError
 from django.shortcuts import render
 from django.db.models import Q
+from rest_framework import status
 
 from rest_framework.filters import (
     SearchFilter,
@@ -25,6 +27,8 @@ from rest_framework.permissions import (
     IsAdminUser,
     IsAuthenticatedOrReadOnly,
 )
+from rest_framework.response import Response
+
 from .models import Profiledet
 from .serializers import (
     ProfileDetailedSerializer,
@@ -56,14 +60,14 @@ class ProfileList(ListAPIView):
         return queryset_list
 
 
-class ProfileDetailedList(RetrieveAPIView):
+class ProfileDetailedList(RetrieveUpdateAPIView):
     queryset = Profiledet.objects.all()
     serializer_class = ProfileDetailedSerializer
     lookup_field = 'user'
     permission_classes = [AllowAny]
 
 
-class ProfileCreate(RetrieveUpdateAPIView):
+class ProfileCreate(CreateAPIView):
     queryset = Profiledet.objects.all()
     serializer_class = ProfileCreateSerializer
     permission_classes = [IsOwnerorObjectReadOnly, IsAuthenticated]
@@ -72,8 +76,12 @@ class ProfileCreate(RetrieveUpdateAPIView):
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
-    # def create(self, request, *args, **kwargs):
-    #     return self.create()
+    def create(self, request, *args, **kwargs):
+        try:
+            return super(ProfileCreate, self).create(request, *args, **kwargs)
+        except IntegrityError:
+            content={'error':'IntegrityError'}
+            return Response(content, status=status.HTTP_400_BAD_REQUEST)
 
 
 class ProfileUpdateList(RetrieveUpdateAPIView):

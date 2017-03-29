@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'abca',
     'profiledet',
     'ApplyScheme',
-    # 'Status',
+    'Status',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -1,36 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Django default" uuid="f254cfee-20a5-4473-b969-5862e7965454">
-      <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <auth-required>false</auth-required>
-      <introspection-schemas>*:</introspection-schemas>
-    </data-source>
-    <data-source name="Django default2" uuid="63b70c59-d2e6-4380-8a6e-49e7599e9cd2">
-      <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <auth-required>false</auth-required>
-      <introspection-schemas>*:</introspection-schemas>
-    </data-source>
-    <data-source name="Django default3" uuid="62f24b81-955f-4aca-b726-455d06d0f516">
-      <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <auth-required>false</auth-required>
-      <introspection-schemas>*:</introspection-schemas>
-    </data-source>
-    <data-source name="Django default4" uuid="429f5e98-72aa-4ba3-86aa-b8b57822ed94">
-      <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <auth-required>false</auth-required>
-      <introspection-schemas>*:</introspection-schemas>
-    </data-source>
-    <data-source name="identifier.sqlite" uuid="a7c226bf-40ef-4022-9f67-083209af4ebf">
+    <data-source name="db.sqlite3" uuid="38421142-cec1-4b26-9b1f-f2b9e3c83407">
       <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>
       <auth-required>false</auth-required>
-      <introspection-schemas>*:</introspection-schemas>
+      <introspection-schemas>*:main</introspection-schemas>
     </data-source>
   </component>
 </project>
