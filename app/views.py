@@ -25,6 +25,7 @@ from .serializers import (
     appDetailedSerializer,
     appCreateSerializer,
     )
+from profiledet.permissions import IsGovernmentOfficial
 
 from .permissions import IsOwnerorObjectReadOnly
 from .paginations import PostPageNumberPagination,PostLimitOffset
@@ -84,7 +85,7 @@ class SchemeUpdateList(RetrieveUpdateAPIView):
     queryset = Post.objects.all()
     serializer_class = appCreateSerializer
     lookup_field = 'slug'
-    # permission_classes = [IsAuthenticated, IsOwnerorObjectReadOnly]
+    permission_classes = [IsAuthenticated, IsGovernmentOfficial]
 
     def perform_create(self, serializer):
         serializer.save()
@@ -93,4 +94,4 @@ class SchemeDeleteList(DestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = appDetailedSerializer
     lookup_field = 'slug'
-    # permission_classes = [IsOwnerorObjectReadOnly]
+    permission_classes = [IsGovernmentOfficial]

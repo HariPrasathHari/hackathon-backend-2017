@@ -5,7 +5,7 @@ from rest_framework.filters import (
     SearchFilter,
     OrderingFilter,
 )
-
+from profiledet.permissions import IsGovernmentOfficial
 from rest_framework.generics import (
     ListAPIView,
     RetrieveAPIView,
@@ -28,7 +28,7 @@ from app.paginations import PostPageNumberPagination, PostLimitOffset
 class StatusList(ListAPIView):
     serializer_class = StatusSerializer
     filter_backends = [SearchFilter, OrderingFilter]
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated,IsGovernmentOfficial]
     pagination_class = PostPageNumberPagination
     search_fields = [
         'Status_of_scheme',
