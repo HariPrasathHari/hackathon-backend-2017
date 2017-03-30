@@ -45,10 +45,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_jwt',
     'registration',
+    'corsheaders',
     # 'pymysql',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.miidleware.CorsMiddleware'
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -90,7 +92,7 @@ REST_FRAMEWORK = {
 
 WSGI_APPLICATION = 'proj.wsgi.application'
 
-
+CORS_ORIGIN_ALLOW_ALL=True
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 

@@ -39,4 +39,13 @@ curl -X POST -H "Authorization: JWT <token>" -H "Content-Type: application/json"
 
 
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImhhcmlwcmFzYXRoaGFyaTkyOTJAZ21haWwuY29tIiwiZXhwIjoxNDkwNjA5MTYzLCJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImhhcmkifQ.hSTsi0QRonyLKBZAgwaLiIgYXCLgO6LDRpKNlYzTgmw
+
+
+curl -X POST -d "username=harihari&password=harihari" http://gctportal.com:7575/api-token-auth/
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhcmloYXJpIiwiZXhwIjoxNDkwODUxNzkzLCJlbWFpbCI6IiIsInVzZXJfaWQiOjJ9.c7rPsNYdXakx8RZUTgftjr9pwFoQHPDJtL3UqUrxDPE"
+
+curl http://gctportal.com:7575/app/schemes/
+
 '''
+
