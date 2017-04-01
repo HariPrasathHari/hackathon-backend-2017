@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc97556-f623-48ef-ba0c-a0f694c0843a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/proj.iml" afterPath="$PROJECT_DIR$/.idea/proj.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proj/settings.py" afterPath="$PROJECT_DIR$/proj/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datacenter/models.py" afterPath="$PROJECT_DIR$/datacenter/models.py" />
     </list>
     <ignored path="proj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +53,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proj/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
@@ -136,11 +133,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/datacenter/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
+            <state relative-caret-position="264">
+              <caret line="210" column="13" selection-start-line="210" selection-start-column="13" selection-end-line="210" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -269,9 +266,9 @@
         <option value="$PROJECT_DIR$/profiledet/views.py" />
         <option value="$PROJECT_DIR$/profiledet/serializers.py" />
         <option value="$PROJECT_DIR$/app/views.py" />
-        <option value="$PROJECT_DIR$/datacenter/models.py" />
         <option value="$PROJECT_DIR$/dumpdata.txt" />
         <option value="$PROJECT_DIR$/proj/settings.py" />
+        <option value="$PROJECT_DIR$/datacenter/models.py" />
       </list>
     </option>
   </component>
@@ -759,7 +756,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491069119052</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added datacenter app">
+      <created>1491083088617</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1491083088617</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -841,7 +845,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="server push" />
     <MESSAGE value="sleepy" />
-    <option name="LAST_COMMIT_MESSAGE" value="sleepy" />
+    <MESSAGE value="added datacenter app" />
+    <option name="LAST_COMMIT_MESSAGE" value="added datacenter app" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1175,14 +1180,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datacenter/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proj/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -1190,6 +1187,14 @@
           <folding>
             <element signature="e#307#322#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datacenter/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="210" column="13" selection-start-line="210" selection-start-column="13" selection-end-line="210" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

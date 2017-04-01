@@ -2,6 +2,22 @@ from django.db import models
 
 # Create your models here.
 
+class BGateway_database(models.Model):
+    Aadhar_no = models.CharField(max_length=12)
+    Account_no =models.CharField(max_length=18)
+    name = models.CharField(max_length=30)
+    Branch_code = models.IntegerField()
+    IFSC_code =models.IntegerField()
+    MICR = models.IntegerField()
+    house_or_building_or_apartment_no = models.CharField(max_length=10)
+    Landmark = models.CharField(max_length=10)
+    Village_ot_town_or_city = models.CharField(max_length=10)
+    District = models.CharField(max_length=10)
+    State = models.CharField(max_length=15)
+    Nationality = models.CharField(max_length=15)
+    Pincode = models.CharField(max_length=6)
+    Phone_no = models.IntegerField()
+
 class HealthInsuranceDatabase(models.Model):
     name = models.CharField(max_length=30)
     designation = models.CharField(max_length=30)
@@ -95,21 +111,7 @@ class Physically_Challenged(models.Model) :
         choices=unit_types,
         )
 
-class BGateway_database(models.Model):
-    Aadhar_no = models.CharField(max_length=12)
-    Account_no =models.CharField(max_length=18)
-    name = models.CharField(max_length=30)
-    Branch_code = models.IntegerField()
-    IFSC_code =models.IntegerField()
-    MICR = models.IntegerField()
-    house_or_building_or_apartment_no = models.CharField(max_length=10)
-    Landmark = models.CharField(max_length=10)
-    Village_ot_town_or_city = models.CharField(max_length=10)
-    District = models.CharField(max_length=10)
-    State = models.CharField(max_length=15)
-    Nationality = models.CharField(max_length=15)
-    Pincode = models.CharField(max_length=6)
-    Phone_no = models.IntegerField()
+
 
 class Income_database(models.Model):
     Name= models.CharField(max_length=10)
@@ -130,7 +132,7 @@ class Income_database(models.Model):
     Nationality = models.CharField(max_length=15)
     Pincode = models.CharField(max_length=6)
     Monthly_income = models.IntegerField()
-    Ration_card_number = models.ForeignKey()
+    Ration_card_number = models.CharField(max_length=12)
     Income_Tax = models.IntegerField()
     PAN_number = models.IntegerField()
     Bank_Account = models.ForeignKey(BGateway_database)
@@ -146,8 +148,8 @@ class Student_db(models.Model):
     Gender = models.CharField(max_length=10,
                              choices=Gender_choices,
                              )
-    Nationality = Nationality = models.CharField(max_length=15)
-    Community = Nationality = models.CharField(max_length=5)
+    Nationality = models.CharField(max_length=15)
+    Community = models.CharField(max_length=5)
     house_or_building_or_apartment_no = models.CharField(max_length=10)
     Landmark = models.CharField(max_length=10)
     Village_ot_town_or_city = models.CharField(max_length=10)
@@ -205,8 +207,8 @@ class College_db(models.Model):
     Gender = models.CharField(max_length=10,
                              choices=Gender_choices,
                              )
-    Nationality = Nationality = models.CharField(max_length=15)
-    Community = Nationality = models.CharField(max_length=5)
+    Nationality = models.CharField(max_length=15)
+    Community = models.CharField(max_length=5)
     house_or_building_or_apartment_no = models.CharField(max_length=10)
     Landmark = models.CharField(max_length=10)
     Village_ot_town_or_city = models.CharField(max_length=10)
