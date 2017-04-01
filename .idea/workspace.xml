@@ -2,154 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccc97556-f623-48ef-ba0c-a0f694c0843a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/migrations/0002_auto_20170401_0808.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/migrations/0003_documents.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Status/migrations/0002_auto_20170328_0129.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Status/migrations/0003_auto_20170329_0952.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Status/migrations/0004_statusofschemes_applied_date.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/migrations/0002_remove_post_user.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/profiledet/migrations/0002_auto_20170326_0233.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata_i.len" afterPath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/_metadata_/metadata_i.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/Agriculture-land.jpeg" afterPath="$PROJECT_DIR$/app/static/Agriculture-land.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.woff2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.editorconfig" afterPath="$PROJECT_DIR$/.editorconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/_name" afterPath="$PROJECT_DIR$/.idea/_name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/storage.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/38421142-cec1-4b26-9b1f-f2b9e3c83407/storage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/429f5e98-72aa-4ba3-86aa-b8b57822ed94/storage.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/429f5e98-72aa-4ba3-86aa-b8b57822ed94/storage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/62f24b81-955f-4aca-b726-455d06d0f516/storage.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/62f24b81-955f-4aca-b726-455d06d0f516/storage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/63b70c59-d2e6-4380-8a6e-49e7599e9cd2/storage.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/63b70c59-d2e6-4380-8a6e-49e7599e9cd2/storage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/a7c226bf-40ef-4022-9f67-083209af4ebf/storage.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/a7c226bf-40ef-4022-9f67-083209af4ebf/storage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/f254cfee-20a5-4473-b969-5862e7965454/storage.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/f254cfee-20a5-4473-b969-5862e7965454/storage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/hari.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/hari.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/proj.iml" afterPath="$PROJECT_DIR$/.idea/proj.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApplyScheme/__init__.py" afterPath="$PROJECT_DIR$/ApplyScheme/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApplyScheme/admin.py" afterPath="$PROJECT_DIR$/ApplyScheme/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApplyScheme/apps.py" afterPath="$PROJECT_DIR$/ApplyScheme/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApplyScheme/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/ApplyScheme/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApplyScheme/migrations/__init__.py" afterPath="$PROJECT_DIR$/ApplyScheme/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApplyScheme/models.py" afterPath="$PROJECT_DIR$/ApplyScheme/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApplyScheme/serializers.py" afterPath="$PROJECT_DIR$/ApplyScheme/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApplyScheme/signals.py" afterPath="$PROJECT_DIR$/ApplyScheme/signals.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApplyScheme/tests.py" afterPath="$PROJECT_DIR$/ApplyScheme/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApplyScheme/urls.py" afterPath="$PROJECT_DIR$/ApplyScheme/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ApplyScheme/views.py" afterPath="$PROJECT_DIR$/ApplyScheme/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Status/__init__.py" afterPath="$PROJECT_DIR$/Status/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Status/admin.py" afterPath="$PROJECT_DIR$/Status/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Status/apps.py" afterPath="$PROJECT_DIR$/Status/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Status/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/Status/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Status/migrations/__init__.py" afterPath="$PROJECT_DIR$/Status/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Status/models.py" afterPath="$PROJECT_DIR$/Status/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Status/serializers.py" afterPath="$PROJECT_DIR$/Status/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Status/tests.py" afterPath="$PROJECT_DIR$/Status/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Status/urls.py" afterPath="$PROJECT_DIR$/Status/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Status/views.py" afterPath="$PROJECT_DIR$/Status/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abca/__init__.py" afterPath="$PROJECT_DIR$/abca/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abca/admin.py" afterPath="$PROJECT_DIR$/abca/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abca/apps.py" afterPath="$PROJECT_DIR$/abca/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abca/migrations/__init__.py" afterPath="$PROJECT_DIR$/abca/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abca/models.py" afterPath="$PROJECT_DIR$/abca/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abca/serializers.py" afterPath="$PROJECT_DIR$/abca/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abca/tests.py" afterPath="$PROJECT_DIR$/abca/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abca/urls.py" afterPath="$PROJECT_DIR$/abca/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abca/views.py" afterPath="$PROJECT_DIR$/abca/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin.py" afterPath="$PROJECT_DIR$/app/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/apps.py" afterPath="$PROJECT_DIR$/app/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/curl_tests.py" afterPath="$PROJECT_DIR$/app/curl_tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models.py" afterPath="$PROJECT_DIR$/app/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/paginations.py" afterPath="$PROJECT_DIR$/app/paginations.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/permissions.py" afterPath="$PROJECT_DIR$/app/permissions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/serializers.py" afterPath="$PROJECT_DIR$/app/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/app/static/css/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/app/static/css/bootstrap-theme.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/app/static/css/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/css/bootstrap-theme.min.css.map" afterPath="$PROJECT_DIR$/app/static/css/bootstrap-theme.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/app/static/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/app/static/css/bootstrap.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/app/static/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/app/static/css/bootstrap.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/css/simple-sidebar.css" afterPath="$PROJECT_DIR$/app/static/css/simple-sidebar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/js/bootstrap.js" afterPath="$PROJECT_DIR$/app/static/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/app/static/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/js/npm.js" afterPath="$PROJECT_DIR$/app/static/js/npm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests.py" afterPath="$PROJECT_DIR$/app/tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/urls.py" afterPath="$PROJECT_DIR$/app/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiledet/__init__.py" afterPath="$PROJECT_DIR$/profiledet/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiledet/admin.py" afterPath="$PROJECT_DIR$/profiledet/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiledet/apps.py" afterPath="$PROJECT_DIR$/profiledet/apps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiledet/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/profiledet/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiledet/migrations/__init__.py" afterPath="$PROJECT_DIR$/profiledet/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiledet/models.py" afterPath="$PROJECT_DIR$/profiledet/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiledet/permissions.py" afterPath="$PROJECT_DIR$/profiledet/permissions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiledet/serializers.py" afterPath="$PROJECT_DIR$/profiledet/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiledet/tests.py" afterPath="$PROJECT_DIR$/profiledet/tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiledet/urls.py" afterPath="$PROJECT_DIR$/profiledet/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiledet/views.py" afterPath="$PROJECT_DIR$/profiledet/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proj/__init__.py" afterPath="$PROJECT_DIR$/proj/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proj/mydb.cnf" afterPath="$PROJECT_DIR$/proj/mydb.cnf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proj/production_settings.py" afterPath="$PROJECT_DIR$/proj/production_settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proj/settings.py" afterPath="$PROJECT_DIR$/proj/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proj/urls.py" afterPath="$PROJECT_DIR$/proj/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proj/wsgi.py" afterPath="$PROJECT_DIR$/proj/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/1.html" afterPath="$PROJECT_DIR$/templates/app/1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/Post.html" afterPath="$PROJECT_DIR$/templates/app/Post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/abc/1.html" afterPath="$PROJECT_DIR$/templates/app/abc/1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/abc/2.html" afterPath="$PROJECT_DIR$/templates/app/abc/2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/abc/3.html" afterPath="$PROJECT_DIR$/templates/app/abc/3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/abc/Post.html" afterPath="$PROJECT_DIR$/templates/app/abc/Post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/abc/blog.html" afterPath="$PROJECT_DIR$/templates/app/abc/blog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/abc/cms.html" afterPath="$PROJECT_DIR$/templates/app/abc/cms.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/abc/home.html" afterPath="$PROJECT_DIR$/templates/app/abc/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/blog.html" afterPath="$PROJECT_DIR$/templates/app/blog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/cms.html" afterPath="$PROJECT_DIR$/templates/app/cms.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/home.html" afterPath="$PROJECT_DIR$/templates/app/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/main.html" afterPath="$PROJECT_DIR$/templates/app/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app/register.html" afterPath="$PROJECT_DIR$/templates/app/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/basse.html" afterPath="$PROJECT_DIR$/templates/basse.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/activate.html" afterPath="$PROJECT_DIR$/templates/registration/activate.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/activation_complete.html" afterPath="$PROJECT_DIR$/templates/registration/activation_complete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/activation_email.txt" afterPath="$PROJECT_DIR$/templates/registration/activation_email.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/activation_email_subject.txt" afterPath="$PROJECT_DIR$/templates/registration/activation_email_subject.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/login.html" afterPath="$PROJECT_DIR$/templates/registration/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/logout.html" afterPath="$PROJECT_DIR$/templates/registration/logout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/password_change_done.html" afterPath="$PROJECT_DIR$/templates/registration/password_change_done.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/password_change_form.html" afterPath="$PROJECT_DIR$/templates/registration/password_change_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/password_reset_complete.html" afterPath="$PROJECT_DIR$/templates/registration/password_reset_complete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" afterPath="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/password_reset_done.html" afterPath="$PROJECT_DIR$/templates/registration/password_reset_done.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/password_reset_email.html" afterPath="$PROJECT_DIR$/templates/registration/password_reset_email.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/password_reset_email.txt" afterPath="$PROJECT_DIR$/templates/registration/password_reset_email.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/password_reset_form.html" afterPath="$PROJECT_DIR$/templates/registration/password_reset_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/registration_closed.html" afterPath="$PROJECT_DIR$/templates/registration/registration_closed.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/registration_complete.html" afterPath="$PROJECT_DIR$/templates/registration/registration_complete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/registration/registration_form.html" afterPath="$PROJECT_DIR$/templates/registration/registration_form.html" />
     </list>
     <ignored path="proj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -199,63 +59,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/proj/settings.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApplyScheme/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="75" column="21" lean-forward="true" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/profiledet/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="354">
-              <caret line="109" column="24" lean-forward="false" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
-              <folding>
-                <element signature="e#307#322#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="paginations.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/paginations.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/proj/__init__.py">
+      <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-2100177454/builtins.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/profiledet/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+            <state relative-caret-position="141">
+              <caret line="5194" column="8" lean-forward="false" selection-start-line="5194" selection-start-column="8" selection-end-line="5194" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/serializers.py">
+        <entry file="file://$PROJECT_DIR$/ApplyScheme/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -263,23 +101,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/profiledet/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="80">
+              <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1383">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="114">
+              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -287,12 +123,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/urls.py">
+      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="294">
+              <caret line="68" column="17" lean-forward="true" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -300,8 +138,30 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="80" column="23" lean-forward="false" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="23" />
+            <state relative-caret-position="133">
+              <caret line="99" column="20" lean-forward="false" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/profiledet/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -338,6 +198,7 @@
       <find>crit</find>
       <find>slu</find>
       <find>require</find>
+      <find>get</find>
     </findStrings>
     <replaceStrings>
       <replace>Profiledet</replace>
@@ -370,10 +231,8 @@
         <option value="$PROJECT_DIR$/profiledet/serializers.py" />
         <option value="$PROJECT_DIR$/ApplyScheme/serializers.py" />
         <option value="$PROJECT_DIR$/ApplyScheme/urls.py" />
-        <option value="$PROJECT_DIR$/app/urls.py" />
         <option value="$PROJECT_DIR$/Status/apps.py" />
         <option value="$PROJECT_DIR$/Status/admin.py" />
-        <option value="$PROJECT_DIR$/profiledet/models.py" />
         <option value="$PROJECT_DIR$/proj/urls.py" />
         <option value="$PROJECT_DIR$/ApplyScheme/__init__.py" />
         <option value="$PROJECT_DIR$/ApplyScheme/apps.py" />
@@ -386,11 +245,8 @@
         <option value="$PROJECT_DIR$/proj/production_settings.py" />
         <option value="$PROJECT_DIR$/abca/views.py" />
         <option value="$PROJECT_DIR$/abca/urls.py" />
-        <option value="$PROJECT_DIR$/profiledet/urls.py" />
         <option value="$PROJECT_DIR$/abca/admin.py" />
         <option value="$PROJECT_DIR$/profiledet/permissions.py" />
-        <option value="$PROJECT_DIR$/ApplyScheme/views.py" />
-        <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/curl_tests.py" />
         <option value="$PROJECT_DIR$/ApplyScheme/signals.py" />
         <option value="$PROJECT_DIR$/abca/serializers.py" />
@@ -398,12 +254,17 @@
         <option value="$PROJECT_DIR$/Status/urls.py" />
         <option value="$PROJECT_DIR$/Status/views.py" />
         <option value="$PROJECT_DIR$/Status/serializers.py" />
-        <option value="$PROJECT_DIR$/profiledet/views.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
-        <option value="$PROJECT_DIR$/proj/settings.py" />
-        <option value="$PROJECT_DIR$/app/serializers.py" />
         <option value="$PROJECT_DIR$/app/admin.py" />
+        <option value="$PROJECT_DIR$/ApplyScheme/views.py" />
+        <option value="$PROJECT_DIR$/proj/settings.py" />
         <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/app/urls.py" />
+        <option value="$PROJECT_DIR$/app/serializers.py" />
+        <option value="$PROJECT_DIR$/app/views.py" />
+        <option value="$PROJECT_DIR$/profiledet/urls.py" />
+        <option value="$PROJECT_DIR$/profiledet/models.py" />
+        <option value="$PROJECT_DIR$/profiledet/views.py" />
       </list>
     </option>
   </component>
@@ -460,85 +321,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="proj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hackathon_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hackathon_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="ApplyScheme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hackathon_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hackathon_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ApplyScheme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hackathon_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hackathon_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hackathon_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hackathon_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="abca" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hackathon_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hackathon_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="abca" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -550,7 +333,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Django-AngularJS-master" />
     <property name="nodejs_interpreter_path" value="" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -998,13 +781,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34080717" sideWeight="0.34358186" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="manage.py@proj" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32735425" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@proj" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32735425" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32735425" sideWeight="0.65641814" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32735425" sideWeight="0.65641814" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258595" sideWeight="0.86856264" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24289009" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27286702" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1085,34 +869,11 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="31" />
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/e3947172/38421142-cec1-4b26-9b1f-f2b9e3c83407/main.ApplyScheme_appliedschemes" />
-    <entry file="dbDummy://dbtable:/e3947172/38421142-cec1-4b26-9b1f-f2b9e3c83407/main.Status_statusofschemes" />
-    <entry file="file://$PROJECT_DIR$/app/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proj/mydb.cnf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proj/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1160,13 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/profiledet/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/abca/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1178,20 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
           <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApplyScheme/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApplyScheme/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1249,7 +989,7 @@
         <state relative-caret-position="260">
           <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1262,38 +1002,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/profiledet/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/abca/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#36#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/profiledet/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="76" column="31" lean-forward="true" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Status/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1303,7 +1017,7 @@
         <state relative-caret-position="-226">
           <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1321,7 +1035,7 @@
         <state relative-caret-position="98">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1368,14 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proj/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/profiledet/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1387,7 +1093,25 @@
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
-          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1400,46 +1124,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ApplyScheme/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/proj/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="109" column="24" lean-forward="false" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
+        <state relative-caret-position="20">
+          <caret line="3" column="27" lean-forward="true" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
           <folding>
             <element signature="e#307#322#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/urls.py">
+    <entry file="file://$PROJECT_DIR$/abca/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state relative-caret-position="20">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views.py">
+    <entry file="file://$USER_HOME$/venvv/lib/python3.5/site-packages/rest_framework/relations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="80" column="23" lean-forward="false" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="23" />
+        <state relative-caret-position="141">
+          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin.py">
+    <entry file="file://$USER_HOME$/venvv/lib/python3.5/site-packages/rest_framework/generics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venvv/lib/python3.5/site-packages/rest_framework/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+          <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+        <state relative-caret-position="294">
+          <caret line="68" column="17" lean-forward="true" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApplyScheme/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -1448,11 +1196,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1383">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="114">
+          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApplyScheme/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="75" column="21" lean-forward="true" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="99" column="20" lean-forward="false" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-2100177454/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="5194" column="8" lean-forward="false" selection-start-line="5194" selection-start-column="8" selection-end-line="5194" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profiledet/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profiledet/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profiledet/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

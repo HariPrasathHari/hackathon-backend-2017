@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.db.models import Q
 
@@ -11,7 +12,9 @@ from rest_framework.generics import (
     RetrieveAPIView,
     DestroyAPIView,
     CreateAPIView,
+
     RetrieveUpdateAPIView,
+    GenericAPIView,
     )
 from rest_framework.permissions import (
     AllowAny,
@@ -19,7 +22,11 @@ from rest_framework.permissions import (
     IsAdminUser,
     IsAuthenticatedOrReadOnly,
     )
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
 from .models import Post
+from profiledet.models import Profiledet
 from .serializers import (
     appSerializer,
     appDetailedSerializer,
@@ -52,10 +59,10 @@ def invalid(request):
 
 
 class SchemeList(ListAPIView):
-    serializer_class = appSerializer
+    serializer_class = appDetailedSerializer
     filter_backends = [SearchFilter, OrderingFilter]
     permission_classes = [AllowAny]
-    pagination_class = PostPageNumberPagination
+    # pagination_class = PostPageNumberPagination
     search_fields = ['title', 'date', 'slug', 'min_age', 'max_salary']
     def get_queryset(self,*args,**kwargs):
         queryset_list = Post.objects.all()
@@ -95,3 +102,10 @@ class SchemeDeleteList(DestroyAPIView):
     serializer_class = appDetailedSerializer
     lookup_field = 'slug'
     permission_classes = [IsGovernmentOfficial]
+
+class GetEligibleSchemes(APIView):
+    def get(self, request, format=None):
+        profile_instance = Profiledet.objects.get(user=request.user)
+        print(profile_instance)
+        usernames = [user.username for user in User.objects.all()]
+        return Response(usernames)
