@@ -95,6 +95,7 @@ class Post(models.Model):
     is_active = models.BooleanField()
     slug = models.CharField(max_length=30)
     criteria = models.ManyToManyField(Scheme_criteria)
+    required_documents = models.ManyToManyField(Documents)
 
     def __str__(self):
         return self.title
