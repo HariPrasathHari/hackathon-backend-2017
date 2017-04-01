@@ -106,6 +106,21 @@ class SchemeDeleteList(DestroyAPIView):
 class GetEligibleSchemes(APIView):
     def get(self, request, format=None):
         profile_instance = Profiledet.objects.get(user=request.user)
-        print(profile_instance)
-        usernames = [user.username for user in User.objects.all()]
+        print(profile_instance.first_name)
+        print(profile_instance.middle_name)
+        print(profile_instance.last_name)
+        usernames = [user.id for user in User.objects.all()]
+
         return Response(usernames)
+'''
+from profiledet.serializers import ProfileDetailedSerializer
+from app.models import Post
+from app.serializers import appSerializer
+from profiledet.models import ProfileDet
+from profiledet.models import Profiledet
+obj=Profiledet.objects.first()
+obj_data = ProfileDetailedSerializer(obj)
+print(obj_data.data)
+
+
+'''
