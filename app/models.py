@@ -43,6 +43,7 @@ class Scheme_criteria(models.Model):
     EXCELLED_IN_ANY_SPOT = 'EXCELLED_IN_ANY_SPOT'
     EMPLOYED = 'EMPLOYED'
     DISABLED = 'DISABLED'
+    IS_ENTREPRENEUR = 'IS_ENTREPRENEUR'
 
     name_choices = (
         (MIN_AGE, 'MIN_AGE'),
@@ -64,7 +65,7 @@ class Scheme_criteria(models.Model):
         (EXCELLED_IN_ANY_SPOT, 'EXCELLED_IN_ANY_SPOT'),
         (EMPLOYED, 'EMPLOYED'),
         (DISABLED, 'DISABLED'),
-
+        (IS_ENTREPRENEUR, 'IS_ENTREPRENEUR'),
     )
 
     # scheme = models.ForeignKey(Post)
