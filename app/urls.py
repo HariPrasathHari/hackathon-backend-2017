@@ -14,6 +14,7 @@ from app.models import Post
 
 urlpatterns = [
     url(r'^contact/', views.contact, name='contact'),
+    url(r'^getid/', views.GetEligibleSchemes.as_view(), name='GetID'),
     url(r'^schemes/create$', SchemeCreate.as_view(), name='CreatePost'),
     url(r'^schemes/(?P<slug>[\w-]+)/$', SchemeDetailedList.as_view(), name='DetailedView'),
     url(r'^schemes/(?P<slug>[\w-]+)/edit/$', SchemeUpdateList.as_view(), name='Edit'),

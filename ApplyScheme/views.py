@@ -28,12 +28,10 @@ from .serializers import (
 
 from app.permissions import IsOwnerorObjectReadOnly
 from app.paginations import PostPageNumberPagination,PostLimitOffset
-
-
 # Create your views here.
 
 
-class SchemeList(ListAPIView):
+class ApplyList(ListAPIView):
     serializer_class = AppliedSchemesSerializer
     filter_backends = [SearchFilter, OrderingFilter]
     permission_classes = [IsAuthenticated]
@@ -57,13 +55,13 @@ class AppliedSchemeCreate(CreateAPIView):
     def perform_create(self, serializer):
         serializer.save()
 
-class SchemeDetailedList(RetrieveAPIView):
+class ApplyDetailedList(RetrieveAPIView):
     queryset = AppliedSchemes.objects.all()
     serializer_class = AppliedSchemesDetailedSerializer
     # lookup_field = 'slug'
     permission_classes = [IsAuthenticatedOrReadOnly, IsAuthenticated]
 
-class SchemeUpdateList(RetrieveUpdateAPIView):
+class ApplyUpdateList(RetrieveUpdateAPIView):
     queryset = AppliedSchemes.objects.all()
     serializer_class = AppliedSchemesSerializer
     # lookup_field = 'slug'
@@ -72,7 +70,7 @@ class SchemeUpdateList(RetrieveUpdateAPIView):
     def perform_create(self, serializer):
         serializer.save()
 
-class SchemeDeleteList(DestroyAPIView):
+class ApplyDeleteList(DestroyAPIView):
     queryset = AppliedSchemes.objects.all()
     serializer_class = AppliedSchemesSerializer
     # lookup_field = 'slug'

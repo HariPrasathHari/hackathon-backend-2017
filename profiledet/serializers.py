@@ -21,13 +21,14 @@ class ProfileCreateSerializer(serializers.ModelSerializer):
 class ProfileDetailedSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profiledet
-        fields = ('age',
-                  'salary',
-                  'community',
-                  'first_name',
-                  'middle_name',
-                  'last_name'
-                  )
+        fields = (
+            'age',
+            'salary',
+            'community',
+            'first_name',
+            'middle_name',
+            'last_name'
+        )
 
         # def get_user(self, obj):
         #     return str(obj.user.username)

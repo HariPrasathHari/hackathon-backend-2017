@@ -67,19 +67,23 @@ class ProfileDetailedList(RetrieveUpdateAPIView):
     permission_classes = [AllowAny]
 
 
-class ProfileCreate(CreateModelMixin, RetrieveUpdateAPIView):
+class ProfileCreate(CreateAPIView):
     queryset = Profiledet.objects.all()
     serializer_class = ProfileCreateSerializer
     permission_classes = [IsOwnerorObjectReadOnly, IsAuthenticated]
     lookup_field = 'user'
 
     def perform_create(self, serializer):
+        print('create def')
         serializer.save(user=self.request.user)
 
     def create(self, request, *args, **kwargs):
         try:
+            print('try')
             return super(ProfileCreate, self).create(request, *args, **kwargs)
+
         except IntegrityError:
+            print('except')
             user_id = Profiledet.objects.get(user=request.user)
             content = {'error' : 'IntegrityError',
                      'user_id' : user_id.pk}
