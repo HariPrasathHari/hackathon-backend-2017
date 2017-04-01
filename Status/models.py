@@ -21,9 +21,10 @@ class StatusOfSchemes(models.Model):
         choices=Status_of,
         default=APPLIED,
     )
+    applied_Date = models.DateTimeField(auto_now_add=True)
     def is_upperclass(self):
         return self.Status_of_scheme in (self.COMPLETED, self.TRANSACTION, self.APPLIED, self.CHECKING)
 
 
     def __str__(self):
-        return self.Status_of_scheme.Status_Of
+        return str(self.Status_of_scheme)+str(self.Scheme_id)

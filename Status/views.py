@@ -20,7 +20,7 @@ from rest_framework.permissions import (
     IsAuthenticatedOrReadOnly,
 )
 
-from .serializers import StatusSerializer
+from .serializers import StatusSerializer, StatusEditSerializer
 from app.permissions import IsOwnerorObjectReadOnly
 from app.paginations import PostPageNumberPagination, PostLimitOffset
 
@@ -45,3 +45,17 @@ class StatusList(ListAPIView):
                 Q(Scheme_id__icontains=query)
             ).distinct()
         return queryset_list
+
+class StatusDetailedList(RetrieveAPIView):
+    queryset = StatusOfSchemes.objects.all()
+    serializer_class = StatusEditSerializer
+    # lookup_field = 'id'
+    permission_classes = [IsAuthenticated]
+
+
+class StatusEdit(RetrieveUpdateAPIView):
+    queryset = StatusOfSchemes.objects.all()
+    serializer_class = StatusEditSerializer
+    # lookup_field = 'id'
+    permission_classes = [IsAuthenticated,
+                          IsGovernmentOfficial]

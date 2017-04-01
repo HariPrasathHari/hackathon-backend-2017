@@ -48,7 +48,7 @@ class ProfileList(ListAPIView):
     search_fields = ['age', 'community', 'first_name', 'last_name', 'middle_name']
 
     def get_queryset(self, *args, **kwargs):
-        queryset_list = Profiledet.objects.filter(user)
+        queryset_list = Profiledet.objects.filter()
         query = self.request.GET.get("q")
         if query:
             queryset_list = queryset_list.filter(

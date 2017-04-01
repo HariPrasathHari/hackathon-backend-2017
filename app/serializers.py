@@ -2,7 +2,7 @@ from rest_framework import serializers
 from rest_framework.serializers import (
     HyperlinkedIdentityField,
     ModelSerializer,
-    SerializerMethodField
+    SerializerMethodField,
     )
 
 from .models import Post
