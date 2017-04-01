@@ -18,10 +18,11 @@ class appCreateSerializer(ModelSerializer):
     class Meta:
         model = Post
         fields = ('title',
-                  'date',
-                  'min_age',
-                  'max_salary',
-                  'req_community',
+                  'criteria',
+                  'launch_date',
+                  'url',
+                  'is_active',
+                  'slug',
                   )
 
 
@@ -32,12 +33,11 @@ class appDetailedSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ('title',
-                  'slug',
-                  'date',
-                  'min_age',
-                  'max_salary',
-                  'req_community',
+                  'criteria',
+                  'launch_date',
                   'url',
+                  'is_active',
+                  'slug',
                   )
 
 
@@ -47,11 +47,9 @@ class appSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ('title',
-                  'date',
-                  'min_age',
-                  'max_salary',
+                  'criteria',
+                  'launch_date',
                   'url',
-                  'req_community',
+                  'is_active',
                   'slug',
                   )
-

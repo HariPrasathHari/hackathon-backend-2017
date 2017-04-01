@@ -9,12 +9,12 @@ https://docs.djangoproject.com/en/1.10/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
-
+import datetime
 import os
 from django.core.mail import send_mail
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -26,7 +26,6 @@ SECRET_KEY = '4goxq+z)5!&0kvp%6^w%9$*&^98(c7c)bak&p_e-e23*n+b8m%'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -45,7 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_jwt',
     'registration',
-    'corsheaders',
+    # 'corsheaders',
     # 'pymysql',
 ]
 
@@ -61,7 +60,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'proj.urls'
-ACCOUNT_ACTIVATION_DAYS=7
+ACCOUNT_ACTIVATION_DAYS = 7
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -92,7 +91,7 @@ REST_FRAMEWORK = {
 
 WSGI_APPLICATION = 'proj.wsgi.application'
 
-CORS_ORIGIN_ALLOW_ALL=True
+CORS_ORIGIN_ALLOW_ALL = True
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
@@ -103,23 +102,57 @@ DATABASES = {
     }
 }
 
-
-
-DATABASES = {
-   'default': {
-      'ENGINE': 'django.db.backends.mysql',
-      'NAME': 'hackathon_db',
-      'USER': 'devil',
-      'PASSWORD': 'harihari',
-      'HOST': '117.239.246.58',
-      'PORT': '3306',
-   }
-}
+#
+# DATABASES = {
+#    'default': {
+#       'ENGINE': 'django.db.backends.mysql',
+#       'NAME': 'hackathon_db',
+#       'USER': 'devil',
+#       'PASSWORD': 'harihari',
+#       'HOST': '117.239.246.58',
+#       'PORT': '3306',
+#    }
+# }
 
 
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
+JWT_AUTH = {
+    'JWT_ENCODE_HANDLER':
+    'rest_framework_jwt.utils.jwt_encode_handler',
+
+    'JWT_DECODE_HANDLER':
+    'rest_framework_jwt.utils.jwt_decode_handler',
+
+    'JWT_PAYLOAD_HANDLER':
+    'rest_framework_jwt.utils.jwt_payload_handler',
+
+    'JWT_PAYLOAD_GET_USER_ID_HANDLER':
+    'rest_framework_jwt.utils.jwt_get_user_id_from_payload_handler',
+
+    'JWT_RESPONSE_PAYLOAD_HANDLER':
+    'rest_framework_jwt.utils.jwt_response_payload_handler',
+
+    'JWT_SECRET_KEY': SECRET_KEY,
+    'JWT_GET_USER_SECRET_KEY': None,
+    'JWT_PUBLIC_KEY': None,
+    'JWT_PRIVATE_KEY': None,
+    'JWT_ALGORITHM': 'HS256',
+    'JWT_VERIFY': True,
+    'JWT_VERIFY_EXPIRATION': True,
+    'JWT_LEEWAY': 0,
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300),
+    'JWT_AUDIENCE': None,
+    'JWT_ISSUER': None,
+
+    'JWT_ALLOW_REFRESH': False,
+    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7),
+
+    'JWT_AUTH_HEADER_PREFIX': 'JWT',
+    'JWT_AUTH_COOKIE': None,
+
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -141,7 +174,7 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'gcttechnocrats1519@gmail.com'
-EMAIL_HOST_PASSWORD ='harihari'
+EMAIL_HOST_PASSWORD = 'harihari'
 SERVER_EMAIL = 'gcttechnocrats1519@gmail.com'
 DEFAULT_EMAIL_FROM = "Gct1519"
 
@@ -158,11 +191,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,"static/")
-MEDIA_ROOT=os.path.join (BASE_DIR,"media/")
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 MEDIA_URL = '/media/'

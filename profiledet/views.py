@@ -80,9 +80,9 @@ class ProfileCreate(CreateModelMixin, RetrieveUpdateAPIView):
         try:
             return super(ProfileCreate, self).create(request, *args, **kwargs)
         except IntegrityError:
-            user_id=Profiledet.objects.get(user=request.user)
-            content={'error':'IntegrityError',
-                     'user_id':user_id.pk}
+            user_id = Profiledet.objects.get(user=request.user)
+            content = {'error' : 'IntegrityError',
+                     'user_id' : user_id.pk}
             return Response(content, status=status.HTTP_400_BAD_REQUEST)
 
 
