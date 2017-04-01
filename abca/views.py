@@ -59,8 +59,12 @@ class UserLoginAPIView(APIView):
 
 
 class GetUserID(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
     def get(self, request, format=None):
-        user_id = Profiledet.objects.get(user=request.user)
-        content = {'user_id':user_id.pk}
-        return Response(content)
+        try:
+            user_id = request.user.pk
+            content = {'user_id': user_id}
+            return Response(content)
+        except:
+            content = {'user_id': ''}
+            return Response(content)
