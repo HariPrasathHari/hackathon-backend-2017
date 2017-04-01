@@ -17,7 +17,7 @@ class Certificate_Proof(models.Model):
 
 
 class Documents(models.Model):
-    doc = models.CharField(max_length=20)
+    doc = models.CharField(max_length=100)
 
     def __str__(self):
         return self.doc
@@ -36,6 +36,7 @@ class Scheme_criteria(models.Model):
     CASTE = 'CASTE'
     MARITAL_STATUS = 'MARITAL_STATUS'
     MIN_SALARY = 'MIN_SALARY'
+    MAX_SALARY = 'MAX_SALARY'
     PREGNANT = 'PREGNANT'
     FARMER = 'FARMER'
     NO_OF_WORKING_YEARS = 'NO_OF_WORKING_YEARS'
@@ -58,6 +59,7 @@ class Scheme_criteria(models.Model):
         (CASTE, 'CASTE'),
         (MARITAL_STATUS, 'MARITAL_STATUS'),
         (MIN_SALARY, 'MIN_SALARY'),
+        (MAX_SALARY, 'MAX_SALARY'),
         (PREGNANT, 'PREGNANT'),
         (FARMER, 'FARMER'),
         (NO_OF_WORKING_YEARS, 'NO_OF_WORKING_YEARS'),
