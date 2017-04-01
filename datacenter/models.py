@@ -176,8 +176,6 @@ class Ration_card_er(models.Model):
                                choices=Relation_choices
                                )
 
-
-
 class Ration_Card(models.Model):
     Ration_Card_number =models.IntegerField()
     Taluk = models.CharField(max_length=30)
@@ -192,6 +190,7 @@ class Ration_Card(models.Model):
     Pincode = models.CharField(max_length=6)
     Telephone=models.IntegerField()
     Mobile=models.IntegerField()
+    Family =models.ManyToManyField(Ration_card_er)
 
 
 
