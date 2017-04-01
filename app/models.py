@@ -90,7 +90,7 @@ class Scheme_criteria(models.Model):
 
 class Post(models.Model):
     scheme_id = models.TextField(null=True)
-    title = models.CharField(max_length=30)
+    title = models.CharField(max_length=100)
     launch_date = models.DateField()
     is_active = models.BooleanField()
     slug = models.CharField(max_length=30)
