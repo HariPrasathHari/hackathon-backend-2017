@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_jwt',
     'registration',
-    # 'corsheaders',
+    'corsheaders',
+    # 'pymysql',
 ]
 
 MIDDLEWARE = [
@@ -101,17 +102,17 @@ DATABASES = {
     }
 }
 
-#
-# DATABASES = {
-#    'default': {
-#       'ENGINE': 'django.db.backends.mysql',
-#       'NAME': 'hackathon_db',
-#       'USER': 'devil',
-#       'PASSWORD': 'harihari',
-#       'HOST': '117.239.246.58',
-#       'PORT': '3306',
-#    }
-# }
+
+DATABASES = {
+   'default': {
+      'ENGINE': 'django.db.backends.mysql',
+      'NAME': 'hackathon_db',
+      'USER': 'devil',
+      'PASSWORD': 'harihari',
+      'HOST': '117.239.246.58',
+      'PORT': '3306',
+   }
+}
 
 
 
@@ -197,4 +198,3 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 MEDIA_URL = '/media/'
-

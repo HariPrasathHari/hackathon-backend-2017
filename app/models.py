@@ -17,7 +17,7 @@ class Certificate_Proof(models.Model):
 
 
 class Documents(models.Model):
-    doc = models.CharField(max_length=20)
+    doc = models.CharField(max_length=100)
 
     def __str__(self):
         return self.doc
@@ -36,6 +36,7 @@ class Scheme_criteria(models.Model):
     CASTE = 'CASTE'
     MARITAL_STATUS = 'MARITAL_STATUS'
     MIN_SALARY = 'MIN_SALARY'
+    MAX_SALARY = 'MAX_SALARY'
     PREGNANT = 'PREGNANT'
     FARMER = 'FARMER'
     NO_OF_WORKING_YEARS = 'NO_OF_WORKING_YEARS'
@@ -43,6 +44,7 @@ class Scheme_criteria(models.Model):
     EXCELLED_IN_ANY_SPOT = 'EXCELLED_IN_ANY_SPOT'
     EMPLOYED = 'EMPLOYED'
     DISABLED = 'DISABLED'
+    IS_ENTREPRENEUR = 'IS_ENTREPRENEUR'
 
     name_choices = (
         (MIN_AGE, 'MIN_AGE'),
@@ -57,6 +59,7 @@ class Scheme_criteria(models.Model):
         (CASTE, 'CASTE'),
         (MARITAL_STATUS, 'MARITAL_STATUS'),
         (MIN_SALARY, 'MIN_SALARY'),
+        (MAX_SALARY, 'MAX_SALARY'),
         (PREGNANT, 'PREGNANT'),
         (FARMER, 'FARMER'),
         (NO_OF_WORKING_YEARS, 'NO_OF_WORKING_YEARS'),
@@ -64,7 +67,7 @@ class Scheme_criteria(models.Model):
         (EXCELLED_IN_ANY_SPOT, 'EXCELLED_IN_ANY_SPOT'),
         (EMPLOYED, 'EMPLOYED'),
         (DISABLED, 'DISABLED'),
-
+        (IS_ENTREPRENEUR, 'IS_ENTREPRENEUR'),
     )
 
     # scheme = models.ForeignKey(Post)
@@ -90,11 +93,12 @@ class Scheme_criteria(models.Model):
 
 class Post(models.Model):
     scheme_id = models.TextField(null=True)
-    title = models.CharField(max_length=30)
+    title = models.CharField(max_length=100)
     launch_date = models.DateField()
     is_active = models.BooleanField()
     slug = models.CharField(max_length=30)
     criteria = models.ManyToManyField(Scheme_criteria)
+    required_documents = models.ManyToManyField(Documents)
 
     def __str__(self):
         return self.title
