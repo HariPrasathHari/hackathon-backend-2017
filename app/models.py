@@ -26,7 +26,7 @@ class Scheme_criteria_vertical(models.Model):
     MIN_AGE = models.IntegerField(null=True)
     MAX_AGE = models.IntegerField(null=True)
     BANK_ACC_NO = models.BooleanField()
-    EDUCATIONAL_QUALIFICATION=models.CharField(max_length=30)
+    EDUCATIONAL_QUALIFICATION = models.CharField(max_length=30)
     IS_INDIAN = models.BooleanField()
     SAVINGS_ACC = models.BooleanField()
     MAX_NO_OF_GIRL_CHILDREN = models.IntegerField(null=True)
