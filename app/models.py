@@ -97,7 +97,7 @@ class Post(models.Model):
     launch_date = models.DateField()
     is_active = models.BooleanField()
     slug = models.CharField(max_length=30)
-    criteria = models.ManyToManyField(Scheme_criteria)
+    # criteria = models.ManyToManyField(Scheme_criteria)
     required_documents = models.ManyToManyField(Documents)
     scheme_criteria_id = models.ForeignKey(Scheme_criteria_vertical)
 
