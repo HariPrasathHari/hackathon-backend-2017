@@ -38,7 +38,7 @@ class appDetailedSerializer(serializers.ModelSerializer):
     # html = SerializerMethodField()
     # criteria = PrimaryKeyRelatedField(many=True, read_only=True)
     # crit =SerializerMethodField()
-    url = post_detail_url
+    # url = post_detail_url
 
     class Meta:
         model = Post
@@ -46,7 +46,7 @@ class appDetailedSerializer(serializers.ModelSerializer):
                   # 'criteria',
                   # 'crit',
                   'launch_date',
-                  'url',
+                  # 'url',
                   'is_active',
                   'slug',
                   )
