@@ -46,7 +46,7 @@ class BGateway_database(models.Model):
     Branch_code = models.IntegerField()
     IFSC_code = models.IntegerField()
     MICR = models.IntegerField()
-    house_or_building_or_apartment_no = models.CharField(max_length=10)
+    house_or_building_or_apartment_no = models.CharField(max_length=100)
     Landmark = models.CharField(max_length=10)
     Village_ot_town_or_city = models.CharField(max_length=10)
     District = models.CharField(max_length=10)
@@ -77,7 +77,7 @@ class HealthInsuranceDatabase(models.Model):
 class Employment(models.Model):
     Aadhar_no = models.OneToOneField(aadhar_Database)
     name = models.CharField(max_length=30)
-    house_or_building_or_apartment_no = models.CharField(max_length=10)
+    house_or_building_or_apartment_no = models.CharField(max_length=100)
     Landmark = models.CharField(max_length=10)
     Village_ot_town_or_city = models.CharField(max_length=10)
     District = models.CharField(max_length=10)
@@ -136,7 +136,7 @@ class Income_database(models.Model):
                               choices=Gender_choices,
                               )
     house_or_building_or_apartment_no = models.CharField(max_length=10)
-    Landmark = models.CharField(max_length=10)
+    Landmark = models.CharField(max_length=100)
     Village_ot_town_or_city = models.CharField(max_length=10)
     District = models.CharField(max_length=10)
     State = models.CharField(max_length=15)
@@ -163,7 +163,7 @@ class Student_db(models.Model):
     Nationality = models.CharField(max_length=15)
     Community = models.CharField(max_length=5)
     house_or_building_or_apartment_no = models.CharField(max_length=10)
-    Landmark = models.CharField(max_length=50)
+    Landmark = models.CharField(max_length=100)
     Village_ot_town_or_city = models.CharField(max_length=50)
     District = models.CharField(max_length=20)
     State = models.CharField(max_length=15)
@@ -203,7 +203,7 @@ class Ration_Card(models.Model):
                                          )
     Father_or_Husband_name = models.CharField(max_length=30)
     house_or_building_or_apartment_no = models.CharField(max_length=10)
-    Landmark = models.CharField(max_length=30)
+    Landmark = models.CharField(max_length=100)
     Village_ot_town_or_city = models.CharField(max_length=20)
     District = models.CharField(max_length=20)
     State = models.CharField(max_length=20)
@@ -216,7 +216,7 @@ class Ration_Card(models.Model):
 
 class College(models.Model):
     name = models.CharField(max_length=30)
-    location = models.CharField(max_length=20)
+    location = models.CharField(max_length=100)
     aicte_code = models.CharField(max_length=12)
 
 
@@ -236,7 +236,7 @@ class College_db(models.Model):
     Nationality = models.CharField(max_length=15)
     Community = models.CharField(max_length=5)
     house_or_building_or_apartment_no = models.CharField(max_length=10)
-    Landmark = models.CharField(max_length=10)
+    Landmark = models.CharField(max_length=100)
     Village_ot_town_or_city = models.CharField(max_length=10)
     District = models.CharField(max_length=10)
     State = models.CharField(max_length=15)
