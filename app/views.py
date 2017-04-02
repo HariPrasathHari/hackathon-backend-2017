@@ -1,11 +1,24 @@
+"""
+'''
+from profiledet.serializers import ProfileDetailedSerializer
+from app.models import Post
+from app.serializers import appSerializer
+from profiledet.models import ProfileDet
+from profiledet.models import Profiledet
+obj=Profiledet.objects.first()
+obj_data = ProfileDetailedSerializer(obj)
+print(obj_data.data)
+
+'''
+"""
 from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.db.models import Q
 
 from rest_framework.filters import (
-        SearchFilter,
-        OrderingFilter,
-    )
+    SearchFilter,
+    OrderingFilter,
+)
 
 from rest_framework.generics import (
     ListAPIView,
@@ -15,13 +28,13 @@ from rest_framework.generics import (
 
     RetrieveUpdateAPIView,
     GenericAPIView,
-    )
+)
 from rest_framework.permissions import (
     AllowAny,
     IsAuthenticated,
     IsAdminUser,
     IsAuthenticatedOrReadOnly,
-    )
+)
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -31,16 +44,17 @@ from .serializers import (
     appSerializer,
     appDetailedSerializer,
     appCreateSerializer,
-    )
+)
 from profiledet.permissions import IsGovernmentOfficial
 
 from .permissions import IsOwnerorObjectReadOnly
-from .paginations import PostPageNumberPagination,PostLimitOffset
+from .paginations import PostPageNumberPagination, PostLimitOffset
 
 
 # Create your views here.
 def hello(request):
     return render(request, 'app/home.html')
+
 
 def contact(request):
     return render(request, 'app/cms.html', {'content': ['hi ', 'this is hari', 'my number is 94886028282']})
@@ -64,7 +78,8 @@ class SchemeList(ListAPIView):
     permission_classes = [AllowAny]
     # pagination_class = PostPageNumberPagination
     search_fields = ['title', 'date', 'slug', 'min_age', 'max_salary']
-    def get_queryset(self,*args,**kwargs):
+
+    def get_queryset(self, *args, **kwargs):
         queryset_list = Post.objects.all()
         query = self.request.GET.get("q")
         if query:
@@ -74,6 +89,7 @@ class SchemeList(ListAPIView):
             ).distinct()
         return queryset_list
 
+
 class SchemeCreate(CreateAPIView):
     queryset = Post.objects.all()
     serializer_class = appCreateSerializer
@@ -82,11 +98,13 @@ class SchemeCreate(CreateAPIView):
     def perform_create(self, serializer):
         serializer.save()
 
+
 class SchemeDetailedList(RetrieveAPIView):
     queryset = Post.objects.all()
     serializer_class = appDetailedSerializer
     lookup_field = 'slug'
     permission_classes = [IsAuthenticatedOrReadOnly]
+
 
 class SchemeUpdateList(RetrieveUpdateAPIView):
     queryset = Post.objects.all()
@@ -97,11 +115,13 @@ class SchemeUpdateList(RetrieveUpdateAPIView):
     def perform_create(self, serializer):
         serializer.save()
 
+
 class SchemeDeleteList(DestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = appDetailedSerializer
     lookup_field = 'slug'
     permission_classes = [IsGovernmentOfficial]
+
 
 class GetEligibleSchemes(APIView):
     def get(self, request, format=None):
@@ -110,17 +130,4 @@ class GetEligibleSchemes(APIView):
         print(profile_instance.middle_name)
         print(profile_instance.last_name)
         usernames = [user.id for user in User.objects.all()]
-
         return Response(usernames)
-'''
-from profiledet.serializers import ProfileDetailedSerializer
-from app.models import Post
-from app.serializers import appSerializer
-from profiledet.models import ProfileDet
-from profiledet.models import Profiledet
-obj=Profiledet.objects.first()
-obj_data = ProfileDetailedSerializer(obj)
-print(obj_data.data)
-
-
-'''

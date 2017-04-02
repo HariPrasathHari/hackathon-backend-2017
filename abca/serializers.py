@@ -126,7 +126,7 @@ class UserCreateSerializer(ModelSerializer):
 
 class UserLoginSerializer(ModelSerializer):
     token = CharField(allow_blank=True, read_only=True)
-    username = CharField()
+    username = CharField(label='aadhar')
 
     # email = EmailField(label='Email Address')
     class Meta:
@@ -139,7 +139,7 @@ class UserLoginSerializer(ModelSerializer):
 
         ]
         extra_kwargs = {"password":
-                            {"write_only": True},
+                            {"write_only": True,"label":'DOB'},
 
                         }
 
