@@ -14,4 +14,3 @@ admin.site.register(Employment)
 admin.site.register(HealthInsuranceDatabase)
 admin.site.register(College)
 
-
