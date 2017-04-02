@@ -99,6 +99,7 @@ class Post(models.Model):
     slug = models.CharField(max_length=30)
     criteria = models.ManyToManyField(Scheme_criteria)
     required_documents = models.ManyToManyField(Documents)
+    scheme_criteria_id = models.ForeignKey(Scheme_criteria_vertical)
 
     def __str__(self):
         return self.title
