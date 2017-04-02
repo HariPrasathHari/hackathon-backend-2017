@@ -22,6 +22,35 @@ class Documents(models.Model):
     def __str__(self):
         return self.doc
 
+class Scheme_criteria_vertical(models.Model):
+    MIN_AGE = models.IntegerField(null=True)
+    MAX_AGE = models.IntegerField(null=True)
+    BANK_ACC_NO = models.BooleanField(null=True)
+    EDUCATIONAL_QUALIFICATION=models.CharField(max_length=30)
+    IS_INDIAN = models.BooleanField(null=True)
+    SAVINGS_ACC = models.BooleanField(null=True)
+    MAX_NO_OF_GIRL_CHILDREN = models.IntegerField(null=True)
+    MAX_NO_OF_CHILDREN = models.IntegerField(null=True)
+    Gender_choices = (
+        ('Male', 'male'),
+        ('female', 'female')
+    )
+    Gender = models.CharField(max_length=10,
+                              choices=Gender_choices,
+                              )
+    CASTE = models.CharField(max_length=20)
+    MARITAL_STATUS = models.BooleanField(null=True)
+    MIN_SALARY = models.IntegerField(null=True)
+    MAX_SALARY = models.IntegerField(null=True)
+    PREGNANT = models.BooleanField(null=True)
+    FARMER = models.BooleanField(null=True)
+    NO_OF_WORKING_YEARS = models.IntegerField(null=True)
+    MARKS_PERCENT = models.IntegerField(null=True)
+    EXCELLED_IN_ANY_SPOT = models.TextField(null=True)
+    EMPLOYED = models.BooleanField(null=True)
+    DISABLED = models.BooleanField(null=True)
+    IS_ENTREPRENEUR = models.BooleanField(null=True)
+
 
 class Scheme_criteria(models.Model):
     MIN_AGE = 'MIN_AGE'
@@ -130,45 +159,14 @@ def create_slug(instance, new_slug=None):
         return create_slug(instance, new_slug=new_slug)
     return slug
 
-
 # def create_user(instance, new_user=None):
 #     if new_user is None:
 #         new_user = instance.request.user
 #         user = new_user
 #     return user
-class Scheme_criteria_vertical(models.Model):
-    MIN_AGE = models.IntegerField()
-    MAX_AGE = models.IntegerField()
-    BANK_ACC_NO = models.BooleanField()
-    EDUCATIONAL_QUALIFICATION=models.CharField(max_length=30)
-    IS_INDIAN = models.BooleanField()
-    SAVINGS_ACC = models.BooleanField()
-    MAX_NO_OF_GIRL_CHILDREN = models.IntegerField()
-    MAX_NO_OF_CHILDREN = models.IntegerField()
-    Gender_choices = (
-        ('Male', 'male'),
-        ('female', 'female')
-    )
-    Gender = models.CharField(max_length=10,
-                              choices=Gender_choices,
-                              )
-    CASTE = models.CharField(max_length=20)
-    MARITAL_STATUS = models.BooleanField()
-    MIN_SALARY = models.IntegerField()
-    MAX_SALARY = models.IntegerField()
-    PREGNANT = models.BooleanField()
-    FARMER = models.BooleanField()
-    NO_OF_WORKING_YEARS = models.IntegerField()
-    MARKS_PERCENT = models.IntegerField()
-    EXCELLED_IN_ANY_SPOT = models.TextField()
-    EMPLOYED = models.BooleanField()
-    DISABLED = models.BooleanField()
-    IS_ENTREPRENEUR = models.BooleanField()
-
 
 def pre_save_post_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = create_slug(instance)
-
 
 pre_save.connect(pre_save_post_receiver, sender=Post)
