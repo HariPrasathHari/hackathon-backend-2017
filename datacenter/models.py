@@ -1,7 +1,8 @@
 from django.db import models
 
-
 # Create your models here.
+
+
 class aadhar_Database(models.Model):
     name = models.CharField(max_length=30)
     Gender_choices = (
@@ -22,7 +23,7 @@ class aadhar_Database(models.Model):
     Email = models.EmailField()
     Mobile_no = models.IntegerField()
     Nationality = models.CharField(max_length=15)
-    bank = models.ForeignKey(BGateway_database)
+    bank = models.CharField(max_length=20)
     Account_no = models.CharField(max_length=18)
     bank_name = models.CharField(max_length=30)
     Branch_code = models.IntegerField()
@@ -38,7 +39,7 @@ class aadhar_Database(models.Model):
 
 
 class BGateway_database(models.Model):
-    Aadhar_no = models.ForeignKey(aadhar_Database)
+    Aadhar_no = models.OneToOneField(aadhar_Database)
     Account_no = models.CharField(max_length=18)
     name = models.CharField(max_length=30)
     Branch_code = models.IntegerField()
@@ -55,7 +56,7 @@ class BGateway_database(models.Model):
 
 
 class HealthInsuranceDatabase(models.Model):
-    Aadhar_no = models.ForeignKey(aadhar_Database)
+    Aadhar_no = models.OneToOneField(aadhar_Database)
     name = models.CharField(max_length=30)
     designation = models.CharField(max_length=30)
     unit_types = (
@@ -73,7 +74,7 @@ class HealthInsuranceDatabase(models.Model):
 
 
 class Employment(models.Model):
-    Aadhar_no = models.ForeignKey(aadhar_Database)
+    Aadhar_no = models.OneToOneField(aadhar_Database)
     name = models.CharField(max_length=30)
     house_or_building_or_apartment_no = models.CharField(max_length=10)
     Landmark = models.CharField(max_length=10)
@@ -100,7 +101,7 @@ class Employment(models.Model):
 
 
 class Physically_Challenged(models.Model):
-    Aadhar_no = models.ForeignKey(aadhar_Database)
+    Aadhar_no = models.OneToOneField(aadhar_Database)
     name = models.CharField(max_length=30)
     Type_of_disabilty = models.CharField(max_length=30)
     dob = models.DateField()
@@ -118,8 +119,8 @@ class Physically_Challenged(models.Model):
 
 
 class Income_database(models.Model):
-    Name = models.CharField(max_length=10)
-    Aadhar_no = models.ForeignKey(aadhar_Database)
+    Name = models.OneToOneField(max_length=10)
+    Aadhar_no = models.OneToOneField(aadhar_Database)
     Father_or_Husband_Name = models.CharField(max_length=10)
 
     Gender_choices = (
@@ -145,7 +146,7 @@ class Income_database(models.Model):
 
 class Student_db(models.Model):
     name = models.CharField(max_length=30)
-    Aadhar_no = models.ForeignKey(aadhar_Database)
+    Aadhar_no = models.OneToOneField(aadhar_Database)
     dob = models.DateField()
     Gender_choices = (
         ('Male', 'male'),
@@ -169,7 +170,7 @@ class Student_db(models.Model):
 
 class Ration_card_er(models.Model):
     name = models.CharField(max_length=30)
-    Aadhar_no = models.ForeignKey(aadhar_Database)
+    Aadhar_no = models.OneToOneField(aadhar_Database)
     age = models.IntegerField()
     dob = models.DateField()
     Relation_choices = (('father', 'father'),
@@ -186,10 +187,16 @@ class Ration_card_er(models.Model):
 
 class Ration_Card(models.Model):
     Ration_Card_number = models.IntegerField()
-    Aadhar_no = models.ForeignKey(aadhar_Database)
+    Aadhar_no = models.OneToOneField(aadhar_Database)
     Taluk = models.CharField(max_length=30)
     Name = models.CharField(max_length=30)
-    Father_Name_Husband = models.CharField(max_length=30)
+    Father_Name_or_Husband_choices = (
+                                        ('Father','father'),
+                                      ('husband','husband'))
+    Father_or_Husband = models.CharField(max_length=9,
+                                          choices=Father_Name_or_Husband_choices
+                                          )
+    Father_Name_or_Husband = models.CharField(max_length=30)
     house_or_building_or_apartment_no = models.CharField(max_length=10)
     Landmark = models.CharField(max_length=20)
     Village_ot_town_or_city = models.CharField(max_length=20)
@@ -201,10 +208,15 @@ class Ration_Card(models.Model):
     Mobile = models.IntegerField()
     Family = models.ManyToManyField(Ration_card_er)
 
+class College(models.Model):
+    name = models.CharField(max_length=30)
+    location = models.CharField(max_length=20)
+    aicte_code = models.CharField(max_length=12)
+
 
 class College_db(models.Model):
     name = models.CharField(max_length=30)
-    Aadhar_no = models.ForeignKey(aadhar_Database)
+    Aadhar_no = models.OneToOneField(aadhar_Database)
     dob = models.DateField()
     duration_start = models.DateField()
     duration_end = models.DateField()
@@ -226,3 +238,4 @@ class College_db(models.Model):
     mother_name = models.CharField(max_length=30)
     Father_occupation = models.CharField(max_length=30)
     mother_occupation = models.CharField(max_length=30)
+    college_id = models.ForeignKey(College)
