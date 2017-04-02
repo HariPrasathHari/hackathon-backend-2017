@@ -125,6 +125,6 @@ class SchemeDeleteList(DestroyAPIView):
 
 class GetEligibleSchemes(APIView):
     def get(self, request, format=None):
-        profile_instance = Profiledet.objects.get(user=request.user)
+        profile_instance = User.objects.get(user=request.user)
         usernames = [user.id for user in User.objects.all()]
         return Response(usernames)

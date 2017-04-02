@@ -23,7 +23,6 @@ class Documents(models.Model):
         return self.doc
 
 class Scheme_criteria_vertical(models.Model):
-<<<<<<< HEAD
     MIN_AGE = models.IntegerField(null=True)
     MAX_AGE = models.IntegerField(null=True)
     BANK_ACC_NO = models.BooleanField()
@@ -32,16 +31,6 @@ class Scheme_criteria_vertical(models.Model):
     SAVINGS_ACC = models.BooleanField()
     MAX_NO_OF_GIRL_CHILDREN = models.IntegerField(null=True)
     MAX_NO_OF_CHILDREN = models.IntegerField(null=True)
-=======
-    MIN_AGE = models.IntegerField()
-    MAX_AGE = models.IntegerField()
-    BANK_ACC_NO = models.BooleanField()
-    EDUCATIONAL_QUALIFICATION=models.CharField(max_length=30)
-    IS_INDIAN = models.BooleanField()
-    SAVINGS_ACC = models.BooleanField()
-    MAX_NO_OF_GIRL_CHILDREN = models.IntegerField()
-    MAX_NO_OF_CHILDREN = models.IntegerField()
->>>>>>> f4509df16d764c6caa4d77d6464533ae9bdd248e
     Gender_choices = (
         ('Male', 'male'),
         ('female', 'female')
@@ -51,7 +40,6 @@ class Scheme_criteria_vertical(models.Model):
                               )
     CASTE = models.CharField(max_length=20)
     MARITAL_STATUS = models.BooleanField()
-<<<<<<< HEAD
     MIN_SALARY = models.IntegerField(null=True)
     MAX_SALARY = models.IntegerField(null=True)
     PREGNANT = models.BooleanField()
@@ -63,18 +51,6 @@ class Scheme_criteria_vertical(models.Model):
     DISABLED = models.BooleanField()
     IS_ENTREPRENEUR = models.BooleanField()
 
-=======
-    MIN_SALARY = models.IntegerField()
-    MAX_SALARY = models.IntegerField()
-    PREGNANT = models.BooleanField()
-    FARMER = models.BooleanField()
-    NO_OF_WORKING_YEARS = models.IntegerField()
-    MARKS_PERCENT = models.IntegerField()
-    EXCELLED_IN_ANY_SPOT = models.TextField()
-    EMPLOYED = models.BooleanField()
-    DISABLED = models.BooleanField()
-    IS_ENTREPRENEUR = models.BooleanField()
->>>>>>> f4509df16d764c6caa4d77d6464533ae9bdd248e
 
 class Scheme_criteria(models.Model):
     MIN_AGE = 'MIN_AGE'
@@ -188,11 +164,6 @@ def create_slug(instance, new_slug=None):
 #         new_user = instance.request.user
 #         user = new_user
 #     return user
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f4509df16d764c6caa4d77d6464533ae9bdd248e
 
 def pre_save_post_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
