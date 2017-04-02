@@ -25,10 +25,10 @@ class Documents(models.Model):
 class Scheme_criteria_vertical(models.Model):
     MIN_AGE = models.IntegerField(null=True)
     MAX_AGE = models.IntegerField(null=True)
-    BANK_ACC_NO = models.BooleanField(null=True)
+    BANK_ACC_NO = models.BooleanField()
     EDUCATIONAL_QUALIFICATION=models.CharField(max_length=30)
-    IS_INDIAN = models.BooleanField(null=True)
-    SAVINGS_ACC = models.BooleanField(null=True)
+    IS_INDIAN = models.BooleanField()
+    SAVINGS_ACC = models.BooleanField()
     MAX_NO_OF_GIRL_CHILDREN = models.IntegerField(null=True)
     MAX_NO_OF_CHILDREN = models.IntegerField(null=True)
     Gender_choices = (
@@ -39,17 +39,17 @@ class Scheme_criteria_vertical(models.Model):
                               choices=Gender_choices,
                               )
     CASTE = models.CharField(max_length=20)
-    MARITAL_STATUS = models.BooleanField(null=True)
+    MARITAL_STATUS = models.BooleanField()
     MIN_SALARY = models.IntegerField(null=True)
     MAX_SALARY = models.IntegerField(null=True)
-    PREGNANT = models.BooleanField(null=True)
-    FARMER = models.BooleanField(null=True)
+    PREGNANT = models.BooleanField()
+    FARMER = models.BooleanField()
     NO_OF_WORKING_YEARS = models.IntegerField(null=True)
     MARKS_PERCENT = models.IntegerField(null=True)
     EXCELLED_IN_ANY_SPOT = models.TextField(null=True)
-    EMPLOYED = models.BooleanField(null=True)
-    DISABLED = models.BooleanField(null=True)
-    IS_ENTREPRENEUR = models.BooleanField(null=True)
+    EMPLOYED = models.BooleanField()
+    DISABLED = models.BooleanField()
+    IS_ENTREPRENEUR = models.BooleanField()
 
 
 class Scheme_criteria(models.Model):
