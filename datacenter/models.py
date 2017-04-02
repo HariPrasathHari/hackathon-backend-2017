@@ -119,7 +119,7 @@ class Physically_Challenged(models.Model):
 
 
 class Income_database(models.Model):
-    Name = models.OneToOneField(max_length=10)
+    Name = models.CharField(max_length=10)
     Aadhar_no = models.OneToOneField(aadhar_Database)
     Father_or_Husband_Name = models.CharField(max_length=10)
 
