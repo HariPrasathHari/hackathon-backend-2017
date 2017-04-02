@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'rest_framework_jwt',
     'registration',
     'corsheaders',
-    # 'pymysql',
 ]
 
 MIDDLEWARE = [

@@ -1,8 +1,17 @@
 """
+'''
+from abca.serializers import UserDetailSerializer
+from django.contrib.auth import get_user_model
+User = get_user_model()
+user_qs = User.objects.first()
+obj_data = UserDetailSerializer(user_qs)
+'''
+
 
 http://127.0.0.1:8000/users/register/
 http://127.0.0.1:8000/users/login/
 """
+
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.auth import get_user_model
 
@@ -10,6 +19,7 @@ from rest_framework.serializers import (
     CharField,
     EmailField,
     IntegerField,
+    DateField,
     HyperlinkedIdentityField,
     ModelSerializer,
     SerializerMethodField,
@@ -32,6 +42,7 @@ class UserDetailSerializer(ModelSerializer):
             # 'email',
             # 'first_name',
             # 'last_name',
+            'password'
         ]
 
 
@@ -40,7 +51,7 @@ class UserCreateSerializer(ModelSerializer):
     # email = EmailField(label='Email Address', write_only=True)
     # email2 = EmailField(label='Confirm Email', write_only=True)
     username = IntegerField(label='Aadhar id')
-    pass2 = CharField(label='Confirm password',write_only=True)
+    pass2 = DateField(label='DOB', write_only=True)
 
     class Meta:
         model = User
@@ -54,7 +65,7 @@ class UserCreateSerializer(ModelSerializer):
 
         ]
         extra_kwargs = {"password":
-                            {"write_only": True}
+                            {"write_only": True, "label": 'confirm DOB'}
                             }
 
     def validate(self, data):
@@ -75,6 +86,15 @@ class UserCreateSerializer(ModelSerializer):
         if len(str(username)) != 12:
             raise ValidationError("Aadhar number should be 12 digit")
         print(username, data)
+        return value
+
+
+    def validate_password(self, value):
+        data = self.get_initial()
+        password = value
+        compared = data.get("pass2")
+        if compared != password:
+            return ValidationError("passwords must match")
         return value
 
     def validate_pass2(self, value):
