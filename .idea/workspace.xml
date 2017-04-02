@@ -56,8 +56,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/datacenter/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="220" column="39" lean-forward="false" selection-start-line="220" selection-start-column="39" selection-end-line="220" selection-end-column="39" />
+            <state relative-caret-position="122">
+              <caret line="210" column="13" lean-forward="true" selection-start-line="210" selection-start-column="13" selection-end-line="210" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -75,7 +75,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Scheme</find>
       <find>schemes</find>
       <find>auth</find>
       <find>user</find>
@@ -105,6 +104,7 @@
       <find>ratio</find>
       <find>aadhar</find>
       <find>fathe</find>
+      <find>class</find>
     </findStrings>
     <replaceStrings>
       <replace>Profiledet</replace>
@@ -705,7 +705,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491104552184</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="9:16">
+      <created>1491104814881</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1491104814881</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -791,7 +798,8 @@
     <MESSAGE value="admin reg db" />
     <MESSAGE value="foreign key aadhar" />
     <MESSAGE value="9:12" />
-    <option name="LAST_COMMIT_MESSAGE" value="9:12" />
+    <MESSAGE value="9:16" />
+    <option name="LAST_COMMIT_MESSAGE" value="9:16" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1133,8 +1141,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/datacenter/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="220" column="39" lean-forward="false" selection-start-line="220" selection-start-column="39" selection-end-line="220" selection-end-column="39" />
+        <state relative-caret-position="122">
+          <caret line="210" column="13" lean-forward="true" selection-start-line="210" selection-start-column="13" selection-end-line="210" selection-end-column="13" />
           <folding />
         </state>
       </provider>

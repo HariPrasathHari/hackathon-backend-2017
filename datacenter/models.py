@@ -65,7 +65,7 @@ class HealthInsuranceDatabase(models.Model):
         ('private', 'private'),
         ('other', 'other'),
     )
-    name = models.CharField(
+    type = models.CharField(
         max_length=30,
         choices=unit_types,
     )
