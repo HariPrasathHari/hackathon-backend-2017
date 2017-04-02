@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 
@@ -84,7 +85,6 @@ class Employment(models.Model):
     Nationality = models.CharField(max_length=15)
     SSN = models.CharField(max_length=12)
     Telephone_no = models.IntegerField()
-
     unit_types = (
         ('10th', '10Th'),
         ('12th', '12th'),
@@ -121,8 +121,13 @@ class Physically_Challenged(models.Model):
 class Income_database(models.Model):
     Name = models.CharField(max_length=10)
     Aadhar_no = models.OneToOneField(aadhar_Database)
-    Father_or_Husband_Name = models.CharField(max_length=10)
-
+    Father_Name_or_Husband_choices = (
+        ('Father', 'father'),
+        ('husband', 'husband'))
+    Father_or_Husband = models.CharField(max_length=9,
+                                         choices=Father_Name_or_Husband_choices
+                                         )
+    Father_or_Husband_name = models.CharField(max_length=30)
     Gender_choices = (
         ('Male', 'male'),
         ('female', 'female')
@@ -191,12 +196,12 @@ class Ration_Card(models.Model):
     Taluk = models.CharField(max_length=30)
     Name = models.CharField(max_length=30)
     Father_Name_or_Husband_choices = (
-                                        ('Father','father'),
-                                      ('husband','husband'))
+        ('Father', 'father'),
+        ('husband', 'husband'))
     Father_or_Husband = models.CharField(max_length=9,
-                                          choices=Father_Name_or_Husband_choices
-                                          )
-    Father_Name_or_Husband = models.CharField(max_length=30)
+                                         choices=Father_Name_or_Husband_choices
+                                         )
+    Father_or_Husband_name = models.CharField(max_length=30)
     house_or_building_or_apartment_no = models.CharField(max_length=10)
     Landmark = models.CharField(max_length=20)
     Village_ot_town_or_city = models.CharField(max_length=20)
@@ -207,6 +212,7 @@ class Ration_Card(models.Model):
     Telephone = models.IntegerField()
     Mobile = models.IntegerField()
     Family = models.ManyToManyField(Ration_card_er)
+
 
 class College(models.Model):
     name = models.CharField(max_length=30)
