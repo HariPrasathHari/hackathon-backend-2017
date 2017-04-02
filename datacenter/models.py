@@ -15,7 +15,7 @@ class aadhar_Database(models.Model):
                               )
     dob = models.DateField()
     house_or_building_or_apartment_no = models.CharField(max_length=10)
-    Landmark = models.CharField(max_length=10)
+    Landmark = models.CharField(max_length=50)
     Village_ot_town_or_city = models.CharField(max_length=10)
     District = models.CharField(max_length=10)
     State = models.CharField(max_length=15)
