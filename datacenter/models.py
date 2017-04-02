@@ -38,6 +38,10 @@ class aadhar_Database(models.Model):
     Nationality = models.CharField(max_length=15)
     Pincode = models.CharField(max_length=6)
 
+    def __str__(self):
+        return str(self.name)
+
+
 
 class BGateway_database(models.Model):
     Aadhar_no = models.OneToOneField(aadhar_Database)
@@ -54,6 +58,9 @@ class BGateway_database(models.Model):
     Nationality = models.CharField(max_length=15)
     Pincode = models.CharField(max_length=6)
     Phone_no = models.IntegerField()
+
+    def __str__(self):
+        return str(self.name)
 
 
 class HealthInsuranceDatabase(models.Model):
@@ -72,6 +79,9 @@ class HealthInsuranceDatabase(models.Model):
     )
     name_of_the_office = models.CharField(max_length=20)
     dob = models.DateField()
+
+    def __str__(self):
+        return str(self.name)
 
 
 class Employment(models.Model):
@@ -99,6 +109,9 @@ class Employment(models.Model):
     community = models.CharField(max_length=4)
     Designation = models.CharField(max_length=10)
 
+    def __str__(self):
+        return str(self.name)
+
 
 class Physically_Challenged(models.Model):
     Aadhar_no = models.OneToOneField(aadhar_Database)
@@ -116,6 +129,9 @@ class Physically_Challenged(models.Model):
         max_length=30,
         choices=unit_types,
     )
+
+    def __str__(self):
+        return str(self.name)
 
 
 class Income_database(models.Model):
@@ -148,6 +164,9 @@ class Income_database(models.Model):
     PAN_number = models.IntegerField()
     Bank_Account = models.ForeignKey(BGateway_database)
 
+    def __str__(self):
+        return str(self.Name)
+
 
 class Student_db(models.Model):
     name = models.CharField(max_length=30)
@@ -172,6 +191,9 @@ class Student_db(models.Model):
     Father_occupation = models.CharField(max_length=30)
     mother_occupation = models.CharField(max_length=30)
 
+    def __str__(self):
+        return str(self.name)
+
 
 class Ration_card_er(models.Model):
     name = models.CharField(max_length=30)
@@ -188,6 +210,9 @@ class Ration_card_er(models.Model):
     Relation = models.CharField(max_length=10,
                                 choices=Relation_choices
                                 )
+
+    def __str__(self):
+        return str(self.name)
 
 
 class Ration_Card(models.Model):
@@ -213,11 +238,17 @@ class Ration_Card(models.Model):
     Mobile = models.BigIntegerField()
     Family = models.ManyToManyField(Ration_card_er)
 
+    def __str__(self):
+        return str(self.Name)
+
 
 class College(models.Model):
     name = models.CharField(max_length=30)
     location = models.CharField(max_length=100)
     aicte_code = models.CharField(max_length=12)
+
+    def __str__(self):
+        return str(self.name)
 
 
 class College_db(models.Model):
@@ -245,3 +276,6 @@ class College_db(models.Model):
     Father_occupation = models.CharField(max_length=30)
     mother_occupation = models.CharField(max_length=30)
     college_id = models.ForeignKey(College)
+
+    def __str__(self):
+        return str(self.name)
