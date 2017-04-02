@@ -1,6 +1,11 @@
 from fabric.api import *
 
-def production():
+env.hosts = [
+    '117.239.246.58',
+]
+env.user = "root"
+
+def hack_db():
     with prefix('source /home/ubuntu/hackathon/hack_env/bin/activate'):
         with cd('/home/ubuntu/hackathon/hackathon_backend'):
             run('git pull')
