@@ -130,7 +130,7 @@ class GetEligibleSchemes(APIView):
     def get(self, request, format=None):
         profile_instance = request.user
         # aadhar_no = profile_instance.username
-        aadhar_no = '123456654321'
+        aadhar_no = '123456789012'
         aadhar_id = aadhar_Database.objects.get(bank=aadhar_no)
         if BGateway_database.objects.filter(Aadhar_no=aadhar_id).exists():
             has_bank_ac = True
@@ -141,8 +141,7 @@ class GetEligibleSchemes(APIView):
         age = timezone.now().year - dob_year
         print(has_bank_ac, age)
         # list_scheme = Post.objects.filter(scheme_criteria_id__BANK_ACC_NO=has_bank_ac).filter(scheme_criteria_id__MIN_AGE__gte=age).filter(scheme_criteria_id__MAX_AGE__lte=age)
-        list_scheme = Post.objects.filter(scheme_criteria_id__MIN_AGE__gte=age).filter(
-            scheme_criteria_id__MAX_AGE__lte=age)
+        list_scheme = Post.objects.filter(scheme_criteria_id_verticals__MIN_AGE__gte=age)
         final_list = []
         for scheme in list_scheme:
             serial_data = appDetailedSerializer(scheme).data
@@ -154,4 +153,12 @@ class GetEligibleSchemes(APIView):
         # serial_data = appDetailedSerializer(list_scheme)
         # # print(serial_data)
         # print(serial_data.data)
+        return Response(final_list)
+
+
+class GetEligibleSchemesFinal(APIView):
+    def get(self, request):
+        aadhar_no = '123456789012'
+        aadhar_id = aadhar_Database.objects.get(bank=aadhar_no)
+        final_list = []
         return Response(final_list)

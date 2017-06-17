@@ -2,7 +2,7 @@ from django.db import models
 
 
 # Create your models here.
-
+# asd
 
 class aadhar_Database(models.Model):
     name = models.CharField(max_length=30)
@@ -23,20 +23,12 @@ class aadhar_Database(models.Model):
     Pincode = models.CharField(max_length=6)
     Email = models.EmailField()
     Mobile_no = models.BigIntegerField()
-    Nationality = models.CharField(max_length=15)
     bank = models.CharField(max_length=20)
     Account_no = models.CharField(max_length=18)
     bank_name = models.CharField(max_length=30)
     Branch_code = models.IntegerField()
     IFSC_code = models.IntegerField()
     MICR = models.IntegerField()
-    house_or_building_or_apartment_no = models.CharField(max_length=10)
-    Landmark = models.CharField(max_length=10)
-    Village_ot_town_or_city = models.CharField(max_length=10)
-    District = models.CharField(max_length=10)
-    State = models.CharField(max_length=15)
-    Nationality = models.CharField(max_length=15)
-    Pincode = models.CharField(max_length=6)
 
     def __str__(self):
         return str(self.name)
@@ -279,3 +271,19 @@ class College_db(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+
+'''
+from datacenter.models import *
+qs=aadhar_Database.objects.all()
+
+
+123456789012
+
+from datacenter.models import *
+obj_instance=aadhar_Database.objects.get(bank=123456789012)
+
+
+
+
+'''

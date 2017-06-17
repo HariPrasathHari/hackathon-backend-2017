@@ -51,6 +51,38 @@ class Scheme_criteria_vertical(models.Model):
     DISABLED = models.BooleanField()
     IS_ENTREPRENEUR = models.BooleanField()
 
+    def __str__(self):
+        return str(self.id)
+
+
+class Scheme_criteria_vertical_bool(models.Model):
+    MIN_AGE = models.BooleanField()
+    MAX_AGE = models.BooleanField()
+    BANK_ACC_NO = models.BooleanField()
+    EDUCATIONAL_QUALIFICATION = models.BooleanField()
+    IS_INDIAN = models.BooleanField()
+    SAVINGS_ACC = models.BooleanField()
+    MAX_NO_OF_GIRL_CHILDREN = models.BooleanField()
+    MAX_NO_OF_CHILDREN = models.BooleanField()
+
+    Gender = models.BooleanField()
+    CASTE = models.BooleanField()
+    MARITAL_STATUS = models.BooleanField()
+    MIN_SALARY = models.BooleanField()
+    MAX_SALARY = models.BooleanField()
+    PREGNANT = models.BooleanField()
+    FARMER = models.BooleanField()
+    NO_OF_WORKING_YEARS = models.BooleanField()
+    MARKS_PERCENT = models.BooleanField()
+    EXCELLED_IN_ANY_SPOT = models.BooleanField()
+    EMPLOYED = models.BooleanField()
+    DISABLED = models.BooleanField()
+    IS_ENTREPRENEUR = models.BooleanField()
+    SCHEME = models.OneToOneField(Post)
+
+    def __str__(self):
+        return str(self.id)
+
 
 class Scheme_criteria(models.Model):
     MIN_AGE = 'MIN_AGE'
@@ -131,7 +163,7 @@ class Post(models.Model):
     scheme_criteria_id = models.ForeignKey(Scheme_criteria_vertical)
 
     def __str__(self):
-        return self.title
+        return self.title + str(self.id)
 
     def __unicode__(self):
         return self.title
