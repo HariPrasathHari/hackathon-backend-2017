@@ -131,7 +131,7 @@ class GetEligibleSchemes(APIView):
         profile_instance = request.user
         # aadhar_no = profile_instance.username
         aadhar_no = '123456789012'
-        aadhar_id = aadhar_Database.objects.get(bank=aadhar_no)
+        aadhar_id = aadhar_Database.objects.get(AadharNumber=aadhar_no)
         if BGateway_database.objects.filter(Aadhar_no=aadhar_id).exists():
             has_bank_ac = True
         else:
@@ -147,18 +147,86 @@ class GetEligibleSchemes(APIView):
             serial_data = appDetailedSerializer(scheme).data
             final_list.append(serial_data)
         print(final_list)
-
-        # usernames = [user.id for user in User.objects.all()]
-        # print(list_scheme)
-        # serial_data = appDetailedSerializer(list_scheme)
-        # # print(serial_data)
-        # print(serial_data.data)
         return Response(final_list)
 
 
 class GetEligibleSchemesFinal(APIView):
     def get(self, request):
-        aadhar_no = '123456789012'
-        aadhar_id = aadhar_Database.objects.get(bank=aadhar_no)
         final_list = []
+        aadhar_no = '111111111111'
+        aadhar_id = aadhar_Database.objects.get(AadharNumber=aadhar_no)
+        dob_year = aadhar_id.dob.year
+        age = timezone.now().year - dob_year
+        all_scheme = Scheme_criteria_vertical_bool.objects.all()
+        for each_scheme in all_scheme:
+            flag = True
+            current_scheme=each_scheme.SCHEME.id
+            scheme_obj = each_scheme.SCHEME.scheme_criteria_id
+            if each_scheme.MIN_AGE:
+                print('min age')
+                print(scheme_obj.MIN_AGE)
+                print(age)
+                if age <= scheme_obj.MIN_AGE:
+                    print('min age condition fail')
+                    flag = False
+                    break
+            if each_scheme.MAX_AGE:
+                print('max age check')
+                print(scheme_obj.MAX_AGE)
+                print(age)
+                if age >= scheme_obj.MAX_AGE:
+                    print('min age condition fail')
+                    flag = False
+                    break
+            if each_scheme.BANK_ACC_NO:
+                print(' check bank account exists?')
+                print(scheme_obj.BANK_ACC_NO)
+                if BGateway_database.objects.filter(Aadhar_no=aadhar_id).exists():
+                    has_bank_ac = True
+                else:
+                    has_bank_ac = False
+                print(has_bank_ac)
+                if scheme_obj.BANK_ACC_NO:
+                    print('bank account has to be checked and required')
+                    if not has_bank_ac:
+                        print('bank account does not exists')
+                        flag = False
+                        break
+            if each_scheme.IS_INDIAN:
+                print(' check if indian?? true\n if he has a aadhar number thn he is a indian')
+                print(scheme_obj.IS_INDIAN)
+                is_indian=False
+                if Ration_card_er.objects.filter(Aadhar_no=aadhar_id).exists():
+                    is_indian = True
+                if Ration_card_er.objects.filter(Aadhar_no=aadhar_id).exists():
+                    is_indian = True
+                print(is_indian)
+                if scheme_obj.IS_INDIAN:
+                    print('is indian has to be checked and required')
+                    if not is_indian:
+                        print('bank account does not exists')
+                        flag = False
+                        break
+            if each_scheme.EDUCATIONAL_QUALIFICATION:
+                print(' educated??')
+                print(scheme_obj.EDUCATIONAL_QUALIFICATION)
+                employment = Employment.objects.filter(Aadhar_no=aadhar_id)
+                phyiscally_challenged = Physically_Challenged.objects.filter(Aadhar_no=aadhar_id)
+
+
+            if flag==True:
+                final_list.append(current_scheme)
+                print(final_list)
+        print(final_list)
         return Response(final_list)
+
+
+
+'''
+
+from app.models import *
+from datacenter.models import *
+from django.utils import timezone
+aadhar_no = '111111111111'
+
+'''

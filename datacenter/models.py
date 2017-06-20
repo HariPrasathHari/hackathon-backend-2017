@@ -1,9 +1,6 @@
 from django.db import models
 
 
-# Create your models here.
-# asd
-
 class aadhar_Database(models.Model):
     name = models.CharField(max_length=30)
     Gender_choices = (
@@ -23,7 +20,7 @@ class aadhar_Database(models.Model):
     Pincode = models.CharField(max_length=6)
     Email = models.EmailField()
     Mobile_no = models.BigIntegerField()
-    bank = models.CharField(max_length=20)
+    AadharNumber = models.CharField(max_length=12, unique=True)
     Account_no = models.CharField(max_length=18)
     bank_name = models.CharField(max_length=30)
     Branch_code = models.IntegerField()
@@ -192,7 +189,8 @@ class Ration_card_er(models.Model):
     Aadhar_no = models.OneToOneField(aadhar_Database)
     age = models.IntegerField()
     dob = models.DateField()
-    Relation_choices = (('father', 'father'),
+    Relation_choices = (
+                        ('father', 'father'),
                         ('mother', 'mother'),
                         ('Husband', 'Husband'),
                         ('wife', 'wife'),
@@ -271,19 +269,3 @@ class College_db(models.Model):
 
     def __str__(self):
         return str(self.name)
-
-
-'''
-from datacenter.models import *
-qs=aadhar_Database.objects.all()
-
-
-123456789012
-
-from datacenter.models import *
-obj_instance=aadhar_Database.objects.get(bank=123456789012)
-
-
-
-
-'''
